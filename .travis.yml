@@ -1,0 +1,83 @@
+language: java
+jdk: oraclejdk8
+sudo: false
+ 
+cache:
+  directories:
+    - ~/.m2
+
+branches: 
+ only:
+ - master
+
+env:
+  global:
+    secure: "dSVf9JLfkUsfi9c/atKC5KYE/yI4ERIkAYXYRN8PWQm5hQkJLPUzhGdt0XnhxgeCOFnmWkr7cc+dXu+z9Og3xHHAdRQB3puVxgTZHfGzUg4m1AKCOoVPb29kqdOvWJ3qNxzjVSIlYIf3AoinSKvIUnhDSt8mEAmt/g3XCinTjGMoQBcuFiNx4fk85rXhD4sA9Mexh+ftOT+mAupGuHiPj7BnCZhJfZ9M10jtMXEnqUqQjx5RKCdpdZSeED+YjkA+nBpWFYW8xDwEhOmSRNRF86WG/3wQGrPCXI0wvyGS1WDytFfk4cp1voxb3GcfKAH44oW5/CHwgm0oS/dVMlPNgBKWMLTGDLDk8zlh6Wrcy5vA2oPqqNor3sd4EcWvhhCgx7fuNQl5i4OEztD6MSaNzJEtowcV8Re+Ff7jUOHsHp2c62ncCSXG7CjzzGLIeSARMWWg3Ul2j7tL5LeuKXPCLJVDg9NQ4a0fiZgrpF0Q6778RQvu94K0U/j0CseTkU3jBpyf/xJz86ekFRwcbK8/c4nblugoshUMX/YwnWdeK8hGYvvsUA4Qx7/+4IwDYkkRmQjk52TPYOUpMm58SroLk3GI6nYkGqGK9Ss80LT8gsK/mQEqRa6eq4SxYEXi+W3/UWMVrNBL2av6zSlmgrBqW3MZYZ44OzgwB3NoGVOMEmk="
+
+addons:
+  apt:
+    packages:
+      - graphviz
+
+before_install:
+# - chmod +x filter-maven-travis.sh
+# - chmod +x push-to-gh-pages.sh
+# - chmod +x codecov.sh
+ - cd pom
+ 
+install:
+ -
+
+before_script:
+ - cat /etc/mavenrc
+ - echo "MAVEN_OPTS='-Xmx2g'" > ~/.mavenrc
+
+script:
+ - free -m
+ - mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN > /dev/null
+# - ((((MAVEN_OPTS="-Xmx256m" mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN > /dev/null; echo $? >&3) | ../filter-maven-travis.sh maven >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+#---------------
+# - ((((MAVEN_OPTS="-Xmx256m" mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN > /dev/null; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+# - mvn clean install -Dmaven.javadoc.skip=true -B
+# - mvn clean install -DskipTests=true -Dmaven.javadoc.skip=true -B
+# - mkdir target || true
+# - mkdir target/site || true
+# - mkdir target/site/apidocs || true
+# - mvn javadoc:aggregate -fn > target/site/apidocs/javadoc-aggregate.txt
+# - mvn cobertura:cobertura -Dcobertura.aggregate=true  -Dcobertura.report.format=xml -fn > target/site/apidocs/cobertura.txt
+# - export MAVEN_OPTS="-Xmx2048m"
+# - mvn site -fn
+# - mvn site -fae
+# - MAVEN_OPTS="-Xmx1024m" JAVA_OPTS="-Xmx1024m" mvn site
+# | grep -i "[INFO] Build"
+# - mvn site:stage -DstagingDirectory=$HOME/site/uAAL.pom -fn > /dev/null
+#####################
+# - ((((mvn javadoc:javadoc -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+# - ((((mvn javadoc:aggregate -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+# - ((((mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+# - ((((mvn surefire-report:report -Dsurefire-report.aggregate=true -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+# - ((((MAVEN_OPTS="-Xmx512m" mvn javadoc:javadoc -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+# - ((((MAVEN_OPTS="-Xmx512m" mvn javadoc:aggregate -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+# - ((((MAVEN_OPTS="-Xmx512m" mvn cobertura:cobertura -Dcobertura.aggregate=true -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+# - ((((MAVEN_OPTS="-Xmx512m" mvn surefire-report:report -Dsurefire-report.aggregate=true -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+# - MAVEN_OPTS="-Xmx512m" mvn surefire-report:report -Dsurefire-report.aggregate=true -fae
+# - export JAVA_TOOL_OPTIONS="-Xmx3g"
+# - JAVA_TOOL_OPTIONS="-Xmx3g" MAVEN_OPTS="-Xmx3g" JAVA_OPTS="--Xmx4" mvn site:site -Dsurefire.argLine="--Xmx3g" -Dcobertura.maxmem=3g -DskipTests -Dcobertura.skip  -Dmaven.javadoc.skip=true -Dmaxmemory=3g -Djavadoc.maxmemory=3g -fn -e
+ - mvn site:site -DskipTests -Dcobertura.skip  -Dmaven.javadoc.skip=true -fn -e
+# - ulimit -a
+# - free -m
+# - echo Delete all coverage reports except the aggregated one!
+# - mv target/site/cobertura/coverage.xml target/site/cobertura/coverage2.xml
+# - find .. -name "coverage.xml" -type f -delete
+# - mv target/site/cobertura/coverage2.xml target/site/cobertura/coverage.xml
+
+after_success:
+# - ../push-to-gh-pages.sh
+ - export GH_TOKEN=GH_TOKEN2
+# - echo "$GH_TOKEN"
+# - bash <(curl -s https://codecov.io/bash) -X network
+ - bash <(curl -s https://codecov.io/bash)
+# - ../codecov.sh
+
+notifications:
+  email: false
