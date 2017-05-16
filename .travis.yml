@@ -77,7 +77,7 @@ after_success:
 # - ../push-to-gh-pages.sh
  - export GH_TOKEN=GH_TOKEN2
 # - echo "$GH_TOKEN"
-# - bash <(curl -s https://codecov.io/bash) -X network
+ - mvn org.eluder.coveralls:coveralls-maven-plugin:4.3.0:report -e
  - bash <(curl -s https://codecov.io/bash)
 # - ../codecov.sh
 
