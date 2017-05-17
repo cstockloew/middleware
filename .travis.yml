@@ -24,7 +24,8 @@ before_install:
 # - chmod +x push-to-gh-pages.sh
 # - chmod +x codecov.sh
  - cd pom
- - $HOME/.m2/settings.xml <(curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/settings.xml)
+ - (curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/settings.xml) > settings.xml
+ - cp settings.xml $HOME/.m2/settings.xml
  - cat $HOME/.m2/settings.xml
 
 install:
