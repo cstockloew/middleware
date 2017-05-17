@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="c29157" href="./BroadcastExecutor.html" title="org.universAAL.middleware.modules.communication.BroadcastExecutor" alt="" coords="15,17,147,42"/>
+<area shape="rect" id="node1" href="./BroadcastExecutor.html" title="&lt;TABLE&gt;" alt="" coords="5,5,157,53"/>
+<area shape="rect" id="c29158" href="./CommunicationModuleImpl.html" title="org.universAAL.middleware.modules.communication.CommunicationModuleImpl" alt="" coords="192,17,371,42"/>
+<area shape="rect" id="node2" href="./CommunicationModuleImpl.html" title="&lt;TABLE&gt;" alt="" coords="181,5,381,53"/>
+<area shape="rect" id="c29159" href="./UnicastExecutor.html" title="org.universAAL.middleware.modules.communication.UnicastExecutor" alt="" coords="416,17,533,42"/>
+<area shape="rect" id="node3" href="./UnicastExecutor.html" title="&lt;TABLE&gt;" alt="" coords="405,5,544,53"/>
+</map>

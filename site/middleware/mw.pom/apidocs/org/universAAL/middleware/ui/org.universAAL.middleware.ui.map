@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="c52539" href="./IUIBus.html" title="org.universAAL.middleware.ui.IUIBus" alt="" coords="16,11,101,53"/>
+<area shape="rect" id="node1" href="./IUIBus.html" title="&lt;TABLE&gt;" alt="" coords="5,6,112,58"/>
+<area shape="rect" id="c52540" href="./UIBusFacade.html" title="org.universAAL.middleware.ui.UIBusFacade" alt="" coords="147,19,248,45"/>
+<area shape="rect" id="node2" href="./UIBusFacade.html" title="&lt;TABLE&gt;" alt="" coords="136,8,259,56"/>
+<area shape="rect" id="c52541" href="./UIHandlerProfile.html" title="org.universAAL.middleware.ui.UIHandlerProfile" alt="" coords="293,19,411,45"/>
+<area shape="rect" id="node3" href="./UIHandlerProfile.html" title="&lt;TABLE&gt;" alt="" coords="283,8,421,56"/>
+<area shape="rect" id="c52542" href="./UIHandler.html" title="org.universAAL.middleware.ui.UIHandler" alt="" coords="456,19,536,45"/>
+<area shape="rect" id="node4" href="./UIHandler.html" title="&lt;TABLE&gt;" alt="" coords="445,8,547,56"/>
+<area shape="rect" id="c52543" href="./UICaller.html" title="org.universAAL.middleware.ui.UICaller" alt="" coords="581,19,651,45"/>
+<area shape="rect" id="node5" href="./UICaller.html" title="&lt;TABLE&gt;" alt="" coords="571,8,661,56"/>
+<area shape="rect" id="c52544" href="./UIResponse.html" title="org.universAAL.middleware.ui.UIResponse" alt="" coords="696,19,789,45"/>
+<area shape="rect" id="node6" href="./UIResponse.html" title="&lt;TABLE&gt;" alt="" coords="685,8,800,56"/>
+<area shape="rect" id="c52545" href="./UIRequest.html" title="org.universAAL.middleware.ui.UIRequest" alt="" coords="834,19,918,45"/>
+<area shape="rect" id="node7" href="./UIRequest.html" title="&lt;TABLE&gt;" alt="" coords="824,8,928,56"/>
+<area shape="rect" id="c52546" href="./IDialogManager.html" title="org.universAAL.middleware.ui.IDialogManager" alt="" coords="963,11,1075,53"/>
+<area shape="rect" id="node8" href="./IDialogManager.html" title="&lt;TABLE&gt;" alt="" coords="952,6,1085,58"/>
+</map>
