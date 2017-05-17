@@ -12,7 +12,7 @@ branches:
 
 env:
   global:
-    secure: "dSVf9JLfkUsfi9c/atKC5KYE/yI4ERIkAYXYRN8PWQm5hQkJLPUzhGdt0XnhxgeCOFnmWkr7cc+dXu+z9Og3xHHAdRQB3puVxgTZHfGzUg4m1AKCOoVPb29kqdOvWJ3qNxzjVSIlYIf3AoinSKvIUnhDSt8mEAmt/g3XCinTjGMoQBcuFiNx4fk85rXhD4sA9Mexh+ftOT+mAupGuHiPj7BnCZhJfZ9M10jtMXEnqUqQjx5RKCdpdZSeED+YjkA+nBpWFYW8xDwEhOmSRNRF86WG/3wQGrPCXI0wvyGS1WDytFfk4cp1voxb3GcfKAH44oW5/CHwgm0oS/dVMlPNgBKWMLTGDLDk8zlh6Wrcy5vA2oPqqNor3sd4EcWvhhCgx7fuNQl5i4OEztD6MSaNzJEtowcV8Re+Ff7jUOHsHp2c62ncCSXG7CjzzGLIeSARMWWg3Ul2j7tL5LeuKXPCLJVDg9NQ4a0fiZgrpF0Q6778RQvu94K0U/j0CseTkU3jBpyf/xJz86ekFRwcbK8/c4nblugoshUMX/YwnWdeK8hGYvvsUA4Qx7/+4IwDYkkRmQjk52TPYOUpMm58SroLk3GI6nYkGqGK9Ss80LT8gsK/mQEqRa6eq4SxYEXi+W3/UWMVrNBL2av6zSlmgrBqW3MZYZ44OzgwB3NoGVOMEmk="
+    secure: "dZRc32lyhribr0jRqqZzbhFVaaLZ0X+JfHWPb6ZSe5jRk0v9lTWXqjop/PKtcjE7/MB/VkCW4HC5JRWoy+Om2n3R0+84u7/+iGKz5lNh6Vm/NmUnyGrqnetsiHzzgFdSPz48vcpPcxItXLGbkXKw5Mac4qJ4QxFdku5cxY5WRfTHkDQysqyGPRoB7HxwD8Cp/Qcf05vBzUSNkad7vUVRdcNXujnGWex6TkdMGqqMjsSvuLUcIGLtpaG9M2lSISUseQ/F+oAyRBiPJdnUDLH4V0twz0n6LsN+5Bk5f8SDKAb/PEiuJzAJI6k8pMnCvlUA6hsMIyKgRzqa+sH1J60x80URnit6ax5z4U1Ufv5hioGGkPotvLW9Cn+qdGSB7RnUXPmbrWq5QG9J8t7vWq7+7JgVjSi42Ywv8kNj7ohc/z8KvDQo9QYwYeIoScDffM9cQy2z1RCU3wdJ19xFLuNdodU4rTdidqsI4UqsJ+IhifUA34VM/lbdhpdYwXYYWDruLIV4displTb7U6FuR9kz7L7e3nX45jznMToH9zcGDp67bM4DuyjS8N30R7C7ThqsAjK7w7CoJB/NpBoZNtIE3LBwFowrH2Pl0MHVoGNDzgLFx9OjSRdjBHQ9Mfhi/RXzd/Q7yZ12nHXSvYJdnORJlzxX0t3Zzw83ir6z1GlChyY="
 
 addons:
   apt:
@@ -27,6 +27,10 @@ before_install:
  - (curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/settings.xml) > settings.xml
  - cp settings.xml $HOME/.m2/settings.xml
  - cat $HOME/.m2/settings.xml
+ - (curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/ci.sh) > ci.sh
+ - chmod +x ci.sh
+ - export MY_REPO="cstockloew/middleware"
+ - rm -rf ~/.m2/repository/org/universAAL/uAAL.pom
 
 install:
  -
@@ -36,8 +40,9 @@ before_script:
  - echo "MAVEN_OPTS='-Xmx2g'" > ~/.mavenrc
 
 script:
- - free -m
- - mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN > /dev/null
+ - ci script
+## - free -m
+## - mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN > /dev/null
 # - ((((MAVEN_OPTS="-Xmx256m" mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN > /dev/null; echo $? >&3) | ../filter-maven-travis.sh maven >&4) 3>&1) | (read xs; exit $xs)) 4>&1
 #---------------
 # - ((((MAVEN_OPTS="-Xmx256m" mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN > /dev/null; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
@@ -61,14 +66,14 @@ script:
 # - ((((mvn surefire-report:report -Dsurefire-report.aggregate=true -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
 # - ((((MAVEN_OPTS="-Xmx512m" mvn javadoc:javadoc -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
 # - ((((mvn javadoc:javadoc -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
- - ((((mvn javadoc:aggregate -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
- - ((((mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
- - ((((mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=html -DskipTests -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+## - ((((mvn javadoc:aggregate -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+## - ((((mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+## - ((((mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=html -DskipTests -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
 # - ((((MAVEN_OPTS="-Xmx512m" mvn surefire-report:report -Dsurefire-report.aggregate=true -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
 # - MAVEN_OPTS="-Xmx512m" mvn surefire-report:report -Dsurefire-report.aggregate=true -fae
 # - export JAVA_TOOL_OPTIONS="-Xmx3g"
 # - JAVA_TOOL_OPTIONS="-Xmx3g" MAVEN_OPTS="-Xmx3g" JAVA_OPTS="--Xmx4" mvn site:site -Dsurefire.argLine="--Xmx3g" -Dcobertura.maxmem=3g -DskipTests -Dcobertura.skip  -Dmaven.javadoc.skip=true -Dmaxmemory=3g -Djavadoc.maxmemory=3g -fn -e
- - mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Duaal.report=ci-repo -fn -e
+## - mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Duaal.report=ci-repo -fn -e
 # - ulimit -a
 # - free -m
 # - echo Delete all coverage reports except the aggregated one!
@@ -77,14 +82,15 @@ script:
 # - mv target/site/cobertura/coverage2.xml target/site/cobertura/coverage.xml
 
 after_success:
- - mvn deploy -DskipTests -DaltDeploymentRepository=uaal-nightly::default::http://depot.universaal.org/maven-repo/nightly/
+ - ci success
+# - mvn deploy -DskipTests -DaltDeploymentRepository=uaal-nightly::default::http://depot.universaal.org/maven-repo/nightly/
 # - ../push-to-gh-pages.sh
- - export GH_TOKEN="deleted"
- - export NIGHTLY_PASSWORD="deleted"
- - export NIGHTLY_USERNAME="deleted"
+# - export GH_TOKEN="deleted"
+# - export NIGHTLY_PASSWORD="deleted"
+# - export NIGHTLY_USERNAME="deleted"
 # - echo "$GH_TOKEN"
- - mvn org.eluder.coveralls:coveralls-maven-plugin:4.3.0:report -e
- - bash <(curl -s https://codecov.io/bash)
+# - mvn org.eluder.coveralls:coveralls-maven-plugin:4.3.0:report -e
+# - bash <(curl -s https://codecov.io/bash)
 # - ../codecov.sh
 
 notifications:
