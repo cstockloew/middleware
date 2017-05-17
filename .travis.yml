@@ -77,7 +77,7 @@ script:
 # - mv target/site/cobertura/coverage2.xml target/site/cobertura/coverage.xml
 
 after_success:
- - mvn deploy:deploy -DaltDeploymentRepository=uaal-nightly::default::http://depot.universaal.org/maven-repo/nightly/
+ - mvn deploy -DskipTests -DaltDeploymentRepository=uaal-nightly::default::http://depot.universaal.org/maven-repo/nightly/
 # - ../push-to-gh-pages.sh
  - export GH_TOKEN="deleted"
  - export NIGHTLY_PASSWORD="deleted"
