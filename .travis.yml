@@ -40,7 +40,7 @@ before_script:
  - echo "MAVEN_OPTS='-Xmx2g'" > ~/.mavenrc
 
 script:
- - ci script
+ - ci.sh script
 ## - free -m
 ## - mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN > /dev/null
 # - ((((MAVEN_OPTS="-Xmx256m" mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN > /dev/null; echo $? >&3) | ../filter-maven-travis.sh maven >&4) 3>&1) | (read xs; exit $xs)) 4>&1
@@ -82,7 +82,7 @@ script:
 # - mv target/site/cobertura/coverage2.xml target/site/cobertura/coverage.xml
 
 after_success:
- - ci success
+ - ci.sh success
 # - mvn deploy -DskipTests -DaltDeploymentRepository=uaal-nightly::default::http://depot.universaal.org/maven-repo/nightly/
 # - ../push-to-gh-pages.sh
 # - export GH_TOKEN="deleted"
