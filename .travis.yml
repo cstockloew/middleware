@@ -24,7 +24,9 @@ before_install:
 # - chmod +x push-to-gh-pages.sh
 # - chmod +x codecov.sh
  - cd pom
- 
+ - $HOME/.m2/settings.xml <(curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/settings.xml)
+ - cat $HOME/.m2/settings.xml
+
 install:
  -
 
@@ -59,13 +61,13 @@ script:
 # - ((((MAVEN_OPTS="-Xmx512m" mvn javadoc:javadoc -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
 # - ((((mvn javadoc:javadoc -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
 # - ((((MAVEN_OPTS="-Xmx512m" mvn javadoc:aggregate -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
- - ((((MAVEN_OPTS="-Xmx512m" mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
- - ((((MAVEN_OPTS="-Xmx512m" mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=html -DskipTests -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+## - ((((MAVEN_OPTS="-Xmx512m" mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
+## - ((((MAVEN_OPTS="-Xmx512m" mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=html -DskipTests -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
 # - ((((MAVEN_OPTS="-Xmx512m" mvn surefire-report:report -Dsurefire-report.aggregate=true -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
 # - MAVEN_OPTS="-Xmx512m" mvn surefire-report:report -Dsurefire-report.aggregate=true -fae
 # - export JAVA_TOOL_OPTIONS="-Xmx3g"
 # - JAVA_TOOL_OPTIONS="-Xmx3g" MAVEN_OPTS="-Xmx3g" JAVA_OPTS="--Xmx4" mvn site:site -Dsurefire.argLine="--Xmx3g" -Dcobertura.maxmem=3g -DskipTests -Dcobertura.skip  -Dmaven.javadoc.skip=true -Dmaxmemory=3g -Djavadoc.maxmemory=3g -fn -e
- - mvn site:site -DskipTests -Dcobertura.skip  -Dmaven.javadoc.skip=true -fn -e
+## - mvn site:site -DskipTests -Dcobertura.skip  -Dmaven.javadoc.skip=true -fn -e
 # - ulimit -a
 # - free -m
 # - echo Delete all coverage reports except the aggregated one!
@@ -74,11 +76,14 @@ script:
 # - mv target/site/cobertura/coverage2.xml target/site/cobertura/coverage.xml
 
 after_success:
+ - mvn deploy:deploy -DaltDeploymentRepository=uaal-nightly::default::http://depot.universaal.org/maven-repo/nightly/
 # - ../push-to-gh-pages.sh
- - export GH_TOKEN=GH_TOKEN2
+ - export GH_TOKEN="deleted"
+ - export NIGHTLY_PASSWORD="deleted"
+ - export NIGHTLY_USERNAME="deleted"
 # - echo "$GH_TOKEN"
- - mvn org.eluder.coveralls:coveralls-maven-plugin:4.3.0:report -e
- - bash <(curl -s https://codecov.io/bash)
+# - mvn org.eluder.coveralls:coveralls-maven-plugin:4.3.0:report -e
+# - bash <(curl -s https://codecov.io/bash)
 # - ../codecov.sh
 
 notifications:
