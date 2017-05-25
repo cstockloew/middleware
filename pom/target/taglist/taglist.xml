@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="org.codehaus.mojo.taglist-maven-plugin">
+  <tags>
+    <tag name="Todo Work" count="63">
+      <files>
+        <file name="org.universAAL.context.che.database.impl.SesameBackendCrdClc2" count="2">
+          <comments>
+            <comment>
+              <lineNumber>63</lineNumber>
+              <comment>Change indexes (specially if we dont use contexts)</comment>
+            </comment>
+            <comment>
+              <lineNumber>67</lineNumber>
+              <comment>Evaluate the inference, and study other reasoners, if any</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.database.impl.SesameBackendWithConfidence" count="1">
+          <comments>
+            <comment>
+              <lineNumber>184</lineNumber>
+              <comment>What to do if events have no confidence?</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.drools.DroolsReasonerProvider" count="1">
+          <comments>
+            <comment>
+              <lineNumber>59</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.space.serv.SCallee" count="2">
+          <comments>
+            <comment>
+              <lineNumber>158</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+            <comment>
+              <lineNumber>182</lineNumber>
+              <comment>All get/add/... seem to do the same (except operation URI). Do something about it? When de/serialized from/to client inputs are treated as RDF with all their properties, including type, and in the client part they are parsed to the most specialized class, which is supposed to be known by the client.</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.sesame.sail.CardinalityNativeStoreConnection" count="1">
+          <comments>
+            <comment>
+              <lineNumber>113</lineNumber>
+              <comment>we should check for open iteration objects.</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.prof.serv.SCallee" count="2">
+          <comments>
+            <comment>
+              <lineNumber>140</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+            <comment>
+              <lineNumber>160</lineNumber>
+              <comment>All get/add/... seem to do the same (except operation URI). Do something about it? :::::::::::::PROFILABLE GET/ADD/CHANGE/REMOVE::::::::::::::::: Because Users have double inheritance from PhThing and Profilable, we cannot simply cast to Profilable (their Java class extends from phThing). Instead they are casted to the smallest common type: Resource. This is only for Java. When de/serialized from/to client they are treated as RDF with all their properties, including type, and in the client part they are parsed to the most specialized class, which is supposed to be known by the client.</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.database.Cleaner" count="1">
+          <comments>
+            <comment>
+              <lineNumber>83</lineNumber>
+              <comment>What if Dec 31st!? It should work...</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.prof.serv.SCaller" count="1">
+          <comments>
+            <comment>
+              <lineNumber>77</lineNumber>
+              <comment>All get/add/... seem to do the same. Do something about it? :::::::::::::USER GET/ADD/CHANGE/REMOVE:::::::::::::::::</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.drools.ProvidedDroolsReasonerService" count="4">
+          <comments>
+            <comment>
+              <lineNumber>194</lineNumber>
+              <comment>Add property for avoiding passing null parameters to the efect (e.g. LTBA_STATE)</comment>
+            </comment>
+            <comment>
+              <lineNumber>201</lineNumber>
+              <comment>Add property for avoiding passing null parameters to the efect (e.g. LTBA_STATE)</comment>
+            </comment>
+            <comment>
+              <lineNumber>217</lineNumber>
+              <comment>End the profiles declaration, currently stopped for checking the working of the whole structure</comment>
+            </comment>
+            <comment>
+              <lineNumber>223</lineNumber>
+              <comment>Auto-generated constructor stub</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.database.impl.SesameBackendCrdClc2Cnf" count="2">
+          <comments>
+            <comment>
+              <lineNumber>68</lineNumber>
+              <comment>Change indexes</comment>
+            </comment>
+            <comment>
+              <lineNumber>70</lineNumber>
+              <comment>Evaluate the inference, and study other reasoners, if any</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.Hub" count="2">
+          <comments>
+            <comment>
+              <lineNumber>203</lineNumber>
+              <comment>Delete triples from store too?</comment>
+            </comment>
+            <comment>
+              <lineNumber>228</lineNumber>
+              <comment>Auto-generated catch block</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.drools.engine.CustomWorkingMemoryEventListener" count="2">
+          <comments>
+            <comment>
+              <lineNumber>48</lineNumber>
+              <comment>Auto-generated catch block</comment>
+            </comment>
+            <comment>
+              <lineNumber>51</lineNumber>
+              <comment>Auto-generated catch block</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.sesame.sail.CardinCollectNativeStoreConnection" count="1">
+          <comments>
+            <comment>
+              <lineNumber>87</lineNumber>
+              <comment>of Resource better? wait and see ClosedCollection, if it's not blank...</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.database.impl.SesameBackendCrdClc" count="2">
+          <comments>
+            <comment>
+              <lineNumber>59</lineNumber>
+              <comment>Change indexes (specially if we dont use contexts)</comment>
+            </comment>
+            <comment>
+              <lineNumber>63</lineNumber>
+              <comment>Evaluate the inference, and study other reasoners, if any</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.reliability.reasoner.SCaller" count="4">
+          <comments>
+            <comment>
+              <lineNumber>50</lineNumber>
+              <comment>Auto-generated constructor stub</comment>
+            </comment>
+            <comment>
+              <lineNumber>54</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+            <comment>
+              <lineNumber>59</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+            <comment>
+              <lineNumber>71</lineNumber>
+              <comment>Try to improve this. Also replace ALWAYS the URI with new one</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.drools.engine.Suscriber" count="1">
+          <comments>
+            <comment>
+              <lineNumber>54</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.ContextHistorySubscriber" count="1">
+          <comments>
+            <comment>
+              <lineNumber>79</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.reliability.reasoner.ReliabilityReasonerActivator" count="1">
+          <comments>
+            <comment>
+              <lineNumber>125</lineNumber>
+              <comment>Improve management of situation patterns. Enhance situation // description. synchronized (getFileLock()) { try { String readline = ""; BufferedReader br = new BufferedReader(new FileReader(new File( confHome, FILENAME))); readline = br.readLine(); while (readline != null) { if (!readline.isEmpty()) { String situation[] = readline.split(" ", 4);</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.database.impl.SesameBackendCrdCnf" count="2">
+          <comments>
+            <comment>
+              <lineNumber>68</lineNumber>
+              <comment>Change indexes</comment>
+            </comment>
+            <comment>
+              <lineNumber>70</lineNumber>
+              <comment>Evaluate the inference, and study other reasoners, if any</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.chemobile.MobileHistorySubscriber" count="1">
+          <comments>
+            <comment>
+              <lineNumber>97</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.database.impl.SesameBackend" count="12">
+          <comments>
+            <comment>
+              <lineNumber>103</lineNumber>
+              <comment>Remove this DEBUG</comment>
+            </comment>
+            <comment>
+              <lineNumber>135</lineNumber>
+              <comment>Change indexes (specially if we dont use contexts)</comment>
+            </comment>
+            <comment>
+              <lineNumber>137</lineNumber>
+              <comment>Study other reasoners, if any</comment>
+            </comment>
+            <comment>
+              <lineNumber>179</lineNumber>
+              <comment>Guess the default namespace. Otherwise the file should not use default namespace prefix : .</comment>
+            </comment>
+            <comment>
+              <lineNumber>183</lineNumber>
+              <comment>Handle format</comment>
+            </comment>
+            <comment>
+              <lineNumber>214</lineNumber>
+              <comment>Guess the default namespace. Otherwise the file should not use default namespace prefix : .</comment>
+            </comment>
+            <comment>
+              <lineNumber>218</lineNumber>
+              <comment>Handle format</comment>
+            </comment>
+            <comment>
+              <lineNumber>241</lineNumber>
+              <comment>Remove this RepositoryConnection con = myRepository.getConnection();</comment>
+            </comment>
+            <comment>
+              <lineNumber>337</lineNumber>
+              <comment>Put a selector in uAAL service for XML, because this is not possible with Turtle</comment>
+            </comment>
+            <comment>
+              <lineNumber>355</lineNumber>
+              <comment>Put a selector in uAAL service for XML results instead of Turtle</comment>
+            </comment>
+            <comment>
+              <lineNumber>367</lineNumber>
+              <comment>Put a selector in uAAL service for XML results instead of Turtle</comment>
+            </comment>
+            <comment>
+              <lineNumber>837</lineNumber>
+              <comment>Find out which ones are stored already?</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.drools.engine.CustomAgendaEventListener" count="2">
+          <comments>
+            <comment>
+              <lineNumber>52</lineNumber>
+              <comment>Auto-generated catch block</comment>
+            </comment>
+            <comment>
+              <lineNumber>55</lineNumber>
+              <comment>Auto-generated catch block</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.sesame.sail.CardinCollect2NativeStoreConnection" count="1">
+          <comments>
+            <comment>
+              <lineNumber>114</lineNumber>
+              <comment>of Resource better? wait and see ClosedCollection, if it's not blank...</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.drools.engine.RulesEngine" count="5">
+          <comments>
+            <comment>
+              <lineNumber>87</lineNumber>
+              <comment>get test mode out to a config file</comment>
+            </comment>
+            <comment>
+              <lineNumber>389</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+            <comment>
+              <lineNumber>481</lineNumber>
+              <comment>Auto-generated catch block</comment>
+            </comment>
+            <comment>
+              <lineNumber>722</lineNumber>
+              <comment>Auto-generated catch block e.printStackTrace(); } try { addFile("C:\\Desarrollo\\universAAL\\svn\\new_services\\sandboxes\\mllorente\\drools.reasoner\\META-INF\\persistence.xml"); } catch (IOException e) { // TODO Auto-generated catch block e.printStackTrace(); }</comment>
+            </comment>
+            <comment>
+              <lineNumber>728</lineNumber>
+              <comment>Auto-generated catch block e.printStackTrace(); }</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.reliability.reasoner.ReliabilityReasonerPublisher" count="1">
+          <comments>
+            <comment>
+              <lineNumber>62</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.reasoner.CHECaller" count="1">
+          <comments>
+            <comment>
+              <lineNumber>78</lineNumber>
+              <comment>Try to improve this. Also replace ALWAYS the URI with new one</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.reliability.reasoner.ReliabilityReasonerSubscriber" count="2">
+          <comments>
+            <comment>
+              <lineNumber>69</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+            <comment>
+              <lineNumber>190</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.ContextHistoryCallee" count="1">
+          <comments>
+            <comment>
+              <lineNumber>86</lineNumber>
+              <comment>Auto-generated method stub</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.database.impl.SesameBackendCrdClcCnf" count="2">
+          <comments>
+            <comment>
+              <lineNumber>68</lineNumber>
+              <comment>Change indexes</comment>
+            </comment>
+            <comment>
+              <lineNumber>70</lineNumber>
+              <comment>Evaluate the inference, and study other reasoners, if any</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.universAAL.context.che.database.impl.SesameBackendCrd" count="2">
+          <comments>
+            <comment>
+              <lineNumber>55</lineNumber>
+              <comment>Change indexes (specially if we dont use contexts)</comment>
+            </comment>
+            <comment>
+              <lineNumber>59</lineNumber>
+              <comment>Evaluate the inference, and study other reasoners, if any</comment>
+            </comment>
+          </comments>
+        </file>
+      </files>
+    </tag>
+  </tags>
+</report>

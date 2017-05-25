@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="91" tokens="476">
+      <file line="236"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCalleeProvidedService.java"/>
+      <file line="442"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.space.server\src\main\java\org\universAAL\context\space\serv\SCalleeProvidedService.java"/>
+      <codefragment><![CDATA[	profiles[7] = prof7.getProfile();
+    }
+
+    // DYNAMIC TYPICAL SERVICE PROFILES
+    /**
+     * Gives you the 4 typical service profiles of an editor service: Get, Add,
+     * Change and Remove. When handling requests in you Callee, you can use the
+     * references to services and arguments URIs prepending
+     * <code>namespace</code> to SimpleEditor constants.
+     * 
+     * @param namespace
+     *            The namespace of your server, ending with the character #. You
+     *            can optionally add some prefix after the # if you use
+     *            SimpleEditor more than once in the same Callee.
+     * @param ontologyURI
+     *            The MY_URI of the class of Service ontology you are going to
+     *            implement
+     * @param path
+     *            The property path from the root of the Service ontology
+     *            concept to the exact concept you want to manage
+     * @param editedURI
+     *            The MY_URI of the class of the concept ontology that you want
+     *            to manage, which is at the end of the property path
+     * @return An array with the 4 typical service profiles
+     */
+    public static ServiceProfile[] getServiceProfiles(String namespace,
+	    String ontologyURI, String[] path, String editedURI) {
+
+	ServiceProfile[] profiles = new ServiceProfile[4];
+
+	// Get
+	Service prof1 = (Service) OntologyManagement.getInstance().getResource(
+		ontologyURI, namespace + SRV_GET_X);
+	ProcessInput input1 = new ProcessInput(namespace + INP_GET_X);
+	input1.setParameterType(editedURI);
+	input1.setCardinality(1, 1);
+	MergedRestriction restr1 = MergedRestriction.getFixedValueRestriction(
+		path[path.length - 1], input1.asVariableReference());
+	prof1.addInstanceLevelRestriction(restr1, path);
+	prof1.getProfile().addInput(input1);
+	ProcessOutput output = new ProcessOutput(namespace + OUT_GET_X);
+	output.setParameterType(editedURI);
+	prof1.getProfile().addOutput(output);
+	prof1.getProfile().addSimpleOutputBinding(output, path);
+	prof1.addInstanceLevelRestriction(MergedRestriction
+		.getAllValuesRestriction(path[path.length - 1], editedURI),
+		path);
+	profiles[0] = prof1.getProfile();
+
+	// Add
+	Service prof2 = ((Service) OntologyManagement.getInstance()
+		.getResource(ontologyURI, namespace + SRV_ADD_X));
+	ProcessInput input2 = new ProcessInput(namespace + INP_ADD_X);
+	input2.setParameterType(editedURI);
+	input2.setCardinality(1, 1);
+	prof2.getProfile().addInput(input2);
+	prof2.getProfile().addAddEffect(path, input2.asVariableReference());
+	profiles[1] = prof2.getProfile();
+
+	// Change
+	Service prof3 = ((Service) OntologyManagement.getInstance()
+		.getResource(ontologyURI, namespace + SRV_CHN_X));
+	ProcessInput input3 = new ProcessInput(namespace + INP_CHN_X);
+	input3.setCardinality(1, 1);
+	input3.setParameterType(editedURI);
+	prof3.getProfile().addInput(input3);
+	prof3.getProfile().addChangeEffect(path, input3.asVariableReference());
+	profiles[2] = prof3.getProfile();
+
+	// Remove
+	Service prof4 = ((Service) OntologyManagement.getInstance()
+		.getResource(ontologyURI, namespace + SRV_REM_X));
+	ProcessInput input4 = new ProcessInput(namespace + INP_REM_X);
+	input4.setParameterType(editedURI);
+	input4.setCardinality(1, 1);
+	prof4.getProfile().addInput(input4);
+	MergedRestriction restr4 = MergedRestriction.getFixedValueRestriction(
+		path[path.length - 1], input4.asVariableReference());
+	prof4.addInstanceLevelRestriction(restr4, path);
+	prof4.getProfile().addRemoveEffect(path);
+	profiles[3] = prof4.getProfile();
+
+	return profiles;
+    }
+    
+    @Override
+    public String getClassURI() {
+	return MY_URI;
+    }
+
+}]]></codefragment>
+   </duplication>
+   <duplication lines="32" tokens="199">
+      <file line="298"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCaller.java"/>
+      <file line="339"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCaller.java"/>
+      <codefragment><![CDATA[			.replace(Queries.ARG1, user.getURI())));
+	lookException(resp);
+	String result2 = getResult(resp);
+	if (result1 == null || result2 == null)
+	    return null;
+	Resource bag = (Resource) Hub.parser
+		.deserialize(result1 + " " + result2, Queries.AUXBAG);
+	if (bag != null) {
+	    Object content = bag.getProperty(Queries.AUXBAGPROP);
+	    ArrayList list = new ArrayList();
+	    OntologyManagement mng = OntologyManagement.getInstance();
+	    if (content instanceof List) {
+		Iterator iter = ((ArrayList) content).iterator();
+		while (iter.hasNext()) {
+		    Resource res = (Resource) iter.next();
+		    list.add(mng.getResource(
+			    mng.getMostSpecializedClass(res.getTypes()),
+			    res.getURI()));
+		}
+	    } else {
+		Resource res = (Resource) content;
+		list.add(mng.getResource(
+			mng.getMostSpecializedClass(res.getTypes()),
+			res.getURI()));
+	    }
+	    return list;
+	} else {
+	    return null;
+	}
+    }
+
+    protected ArrayList getSubProfilesOfProfile(Resource profile)]]></codefragment>
+   </duplication>
+   <duplication lines="37" tokens="170">
+      <file line="458"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCaller.java"/>
+      <file line="513"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.space.server\src\main\java\org\universAAL\context\space\serv\SCaller.java"/>
+      <codefragment><![CDATA[		}
+	    }
+	    if (returnValue instanceof String) {
+		return (String) returnValue;
+	    } else {
+		return null;
+	    }
+	}
+    }
+
+    /**
+     * Splits a Turtle serialized string into prefixes and content, so it can be
+     * used inside SPARQL queries.
+     * 
+     * @param serialized
+     *            The turtle string
+     * @return An array of length 2. The first item [0] is the string with the
+     *         prefixes, and the second [1] is the string with the triples
+     *         content
+     */
+    public static String[] splitPrefixes(String serialized) {
+	int lastprefix = 0, lastprefixdot = 0, lastprefixuri = 0;
+	lastprefix = serialized.toLowerCase().lastIndexOf("@prefix");
+	if (lastprefix >= 0) {
+	    lastprefixuri = serialized.substring(lastprefix).indexOf(">");
+	    lastprefixdot = serialized.substring(lastprefix + lastprefixuri)
+		    .indexOf(".");
+	}
+	String[] result = new String[2];
+	result[0] = serialized
+		.substring(0, lastprefixuri + lastprefixdot + lastprefix + 1)
+		.replace("@", " ").replace(">.", "> ").replace(" .", " ")
+		.replace(". ", " ");
+	result[1] = serialized
+		.substring(lastprefixuri + lastprefixdot + lastprefix + 1);
+	return result;
+    }]]></codefragment>
+   </duplication>
+   <duplication lines="42" tokens="167">
+      <file line="49"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinCollect2NativeStoreConnection.java"/>
+      <file line="45"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinCollectNativeStoreConnection.java"/>
+      <codefragment><![CDATA[			}else if(prevObjIsClosedCollection(subj,pred,contexts)){
+			    removeStatements(subj, pred, null, true, contexts);
+			}else if(objIsClosedCollection(obj, contexts)){
+			    removeStatements(subj, pred, null, true, contexts);
+			}
+			    
+			//END PATCH
+			boolean wasNew = nativeStore.getTripleStore().storeTriple(subjID, predID, objID, contextID,
+					explicit);
+			result |= wasNew;
+
+			if (wasNew) {
+				// The triple was not yet present in the triple store
+				sailChangedEvent.setStatementsAdded(true);
+
+				if (hasConnectionListeners()) {
+					Statement st;
+
+					if (context != null) {
+						st = valueStore.createStatement(subj, pred, obj, context);
+					}
+					else {
+						st = valueStore.createStatement(subj, pred, obj);
+					}
+
+					notifyStatementAdded(st);
+				}
+			}
+		}
+	}
+	catch (IOException e) {
+		throw new SailException(e);
+	}
+	catch (RuntimeException e) {
+		logger.error("Encountered an unexpected problem while trying to add a statement", e);
+		throw e;
+	}
+
+	return result;
+    }
+
+    private boolean prevObjIsClosedCollection(Resource subj, URI pred,]]></codefragment>
+   </duplication>
+   <duplication lines="34" tokens="165">
+      <file line="49"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.che.module.cardinality\src\main\java\org\universAAL\context\che\database\impl\SesameBackendCrdClc.java"/>
+      <file line="58"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.che.module.cardinality\src\main\java\org\universAAL\context\che\database\impl\SesameBackendCrdClcCnf.java"/>
+      <codefragment><![CDATA[    private static Log log = Hub.getLog(SesameBackendCrdClc.class);
+
+    @Override
+    public void connect() {
+	String dataPath = Hub.getProperties().getProperty("STORE.LOCATION");
+	boolean encrypt = Boolean.parseBoolean(Hub.getProperties().getProperty(
+		"STORE.ENCRYPT"));
+	// I use C:\Proyectos\UNIVERSAAL\ContextStore\Stores\SAIL_FCRDFS_Native
+	if (dataPath != null) {
+	    File dataDir = new File(dataPath);
+	    String indexes = "spoc,posc,cosp"; // TODO: Change indexes
+					       // (specially
+					       // if we dont use contexts)
+	    log.info("CHe connects to {} ", dataDir.toString());
+	    // TODO: Evaluate the inference, and study other reasoners, if any
+	    try {
+		myRepository = new SailRepository(
+			new ForwardChainingRDFSInferencer(
+				new CardinCollectNativeStore(dataDir, indexes,
+					encrypt)));
+		myRepository.initialize();
+		con = myRepository.getConnection();
+		if (Boolean.parseBoolean(Hub.getProperties().getProperty(
+			"STORE.PRELOAD"))) {
+		    this.populate();
+		}
+	    } catch (Exception e) {
+		log.error("connect",
+			"Exception trying to initilaize the store: {} ", e);
+		e.printStackTrace();
+	    }
+	} else {
+	    log.error("connect", "No location specified for the store. "
+		    + "Add and specify the configuration"]]></codefragment>
+   </duplication>
+   <duplication lines="33" tokens="163">
+      <file line="45"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.che.module.cardinality\src\main\java\org\universAAL\context\che\database\impl\SesameBackendCrd.java"/>
+      <file line="58"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.che.module.cardinality\src\main\java\org\universAAL\context\che\database\impl\SesameBackendCrdCnf.java"/>
+      <codefragment><![CDATA[    private static Log log = Hub.getLog(SesameBackendCrd.class);
+
+    @Override
+    public void connect() {
+	String dataPath = Hub.getProperties().getProperty("STORE.LOCATION");
+	boolean encrypt = Boolean.parseBoolean(Hub.getProperties().getProperty(
+		"STORE.ENCRYPT"));
+	// I use C:\Proyectos\UNIVERSAAL\ContextStore\Stores\SAIL_FCRDFS_Native
+	if (dataPath != null) {
+	    File dataDir = new File(dataPath);
+	    String indexes = "spoc,posc,cosp"; // TODO: Change indexes
+					       // (specially
+					       // if we dont use contexts)
+	    log.info("CHe connects to {} ", dataDir.toString());
+	    // TODO: Evaluate the inference, and study other reasoners, if any
+	    try {
+		myRepository = new SailRepository(
+			new ForwardChainingRDFSInferencer(
+				new CardinalityNativeStore(dataDir, indexes,
+					encrypt)));
+		myRepository.initialize();
+		con = myRepository.getConnection();
+		if (Boolean.parseBoolean(Hub.getProperties().getProperty(
+			"STORE.PRELOAD"))) {
+		    this.populate();
+		}
+	    } catch (Exception e) {
+		log.error("connect",
+			"Exception trying to initilaize the store: {} ", e);
+		e.printStackTrace();
+	    }
+	} else {
+	    log.error("connect", "No location specified for the store."]]></codefragment>
+   </duplication>
+   <duplication lines="33" tokens="163">
+      <file line="53"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.che.module.cardinality\src\main\java\org\universAAL\context\che\database\impl\SesameBackendCrdClc2.java"/>
+      <file line="58"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.che.module.cardinality\src\main\java\org\universAAL\context\che\database\impl\SesameBackendCrdClc2Cnf.java"/>
+      <codefragment><![CDATA[    private static Log log = Hub.getLog(SesameBackendCrdClc2.class);
+
+    @Override
+    public void connect() {
+	String dataPath = Hub.getProperties().getProperty("STORE.LOCATION");
+	boolean encrypt = Boolean.parseBoolean(Hub.getProperties().getProperty(
+		"STORE.ENCRYPT"));
+	// I use C:\Proyectos\UNIVERSAAL\ContextStore\Stores\SAIL_FCRDFS_Native
+	if (dataPath != null) {
+	    File dataDir = new File(dataPath);
+	    String indexes = "spoc,posc,cosp"; // TODO: Change indexes
+					       // (specially
+					       // if we dont use contexts)
+	    log.info("CHe connects to {} ", dataDir.toString());
+	    // TODO: Evaluate the inference, and study other reasoners, if any
+	    try {
+		myRepository = new SailRepository(
+			new ForwardChainingRDFSInferencer(
+				new CardinCollect2NativeStore(dataDir, indexes,
+					encrypt)));
+		myRepository.initialize();
+		con = myRepository.getConnection();
+		if (Boolean.parseBoolean(Hub.getProperties().getProperty(
+			"STORE.PRELOAD"))) {
+		    this.populate();
+		}
+	    } catch (Exception e) {
+		log.error("connect",
+			"Exception trying to initilaize the store: {} ", e);
+		e.printStackTrace();
+	    }
+	} else {
+	    log.error("connect",]]></codefragment>
+   </duplication>
+   <duplication lines="41" tokens="163">
+      <file line="415"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCaller.java"/>
+      <file line="468"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.space.server\src\main\java\org\universAAL\context\space\serv\SCaller.java"/>
+      <codefragment><![CDATA[    }
+
+    /**
+     * Prepares the call to the Do SPARQL service of CHE.
+     * 
+     * @param query
+     *            The SPARQL query
+     * @return The prepared request
+     */
+    private ServiceRequest getDoSPARQLRequest(String query) {
+	ServiceRequest getQuery = new ServiceRequest(
+		new ContextHistoryService(null), null);
+
+	MergedRestriction r = MergedRestriction.getFixedValueRestriction(
+		ContextHistoryService.PROP_PROCESSES, query);
+
+	getQuery.getRequestedService().addInstanceLevelRestriction(r,
+		new String[] { ContextHistoryService.PROP_PROCESSES });
+	getQuery.addSimpleOutputBinding(new ProcessOutput(OUTPUT_RESULT_STRING),
+		new PropertyPath(null, true,
+			new String[] { ContextHistoryService.PROP_RETURNS })
+				.getThePath());
+	return getQuery;
+    }
+
+    /**
+     * Helper method to get the result from the Service Response of CHE.
+     * 
+     * @param call
+     *            The service response
+     * @return the result SPARQL string
+     */
+    private String getResult(ServiceResponse call) {
+	Object returnValue = null;
+	List outputs = call.getOutputs();
+	if (outputs == null) {
+	    return null;
+	} else {
+	    for (Iterator i = outputs.iterator(); i.hasNext();) {
+		ProcessOutput output = (ProcessOutput) i.next();
+		if (output.getURI().equals(OUTPUT_RESULT_STRING)]]></codefragment>
+   </duplication>
+   <duplication lines="32" tokens="157">
+      <file line="18"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinCollect2NativeStoreConnection.java"/>
+      <file line="16"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinCollectNativeStoreConnection.java"/>
+      <codefragment><![CDATA[    protected CardinCollect2NativeStoreConnection(
+	    CardinalityNativeStore nativeStore) throws IOException {
+	super(nativeStore);
+    }
+
+    @Override
+    protected boolean addStatement(Resource subj, URI pred, Value obj,
+	    boolean explicit, Resource... contexts) throws SailException {
+	OpenRDFUtil.verifyContextNotNull(contexts);
+
+	boolean result = false;
+
+	try {
+		ValueStore valueStore = nativeStore.getValueStore();
+		int subjID = valueStore.storeValue(subj);
+		int predID = valueStore.storeValue(pred);
+		int objID = valueStore.storeValue(obj);
+
+		if (contexts.length == 0) {
+			contexts = new Resource[] { null };
+		}
+
+		for (Resource context : contexts) {
+			int contextID = 0;
+			if (context != null) {
+				contextID = valueStore.storeValue(context);
+			}
+
+			//START PATCH
+			if(hasMaxCardinality1(pred, contexts)){
+			    removeStatements(subj, pred, null, true, contexts);
+			}else if(prevObjIsClosedCollection(subj,pred,contexts)){]]></codefragment>
+   </duplication>
+   <duplication lines="27" tokens="156">
+      <file line="237"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCaller.java"/>
+      <file line="304"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCaller.java"/>
+      <file line="345"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCaller.java"/>
+      <codefragment><![CDATA[	Resource bag = (Resource) Hub.parser.deserialize(result + " " + result2,
+		Queries.AUXBAG);
+	if (bag != null) {
+	    Object content = bag.getProperty(Queries.AUXBAGPROP);
+	    ArrayList list = new ArrayList();
+	    OntologyManagement mng = OntologyManagement.getInstance();
+	    if (content instanceof List) {
+		Iterator iter = ((ArrayList) content).iterator();
+		while (iter.hasNext()) {
+		    Resource res = (Resource) iter.next();
+		    list.add(mng.getResource(
+			    mng.getMostSpecializedClass(res.getTypes()),
+			    res.getURI()));
+		}
+	    } else {
+		Resource res = (Resource) content;
+		list.add(mng.getResource(
+			mng.getMostSpecializedClass(res.getTypes()),
+			res.getURI()));
+	    }
+	    return list;
+	} else {
+	    return null;
+	}
+    }
+
+    protected Resource getProfileOfUser(Resource user)]]></codefragment>
+   </duplication>
+   <duplication lines="23" tokens="146">
+      <file line="239"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCaller.java"/>
+      <file line="305"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCaller.java"/>
+      <file line="346"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.prof.server\src\main\java\org\universAAL\context\prof\serv\SCaller.java"/>
+      <file line="450"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.space.server\src\main\java\org\universAAL\context\space\serv\SCaller.java"/>
+      <codefragment><![CDATA[	if (bag != null) {
+	    Object content = bag.getProperty(Queries.AUXBAGPROP);
+	    ArrayList list = new ArrayList();
+	    OntologyManagement mng = OntologyManagement.getInstance();
+	    if (content instanceof List) {
+		Iterator iter = ((ArrayList) content).iterator();
+		while (iter.hasNext()) {
+		    Resource res = (Resource) iter.next();
+		    list.add(mng.getResource(
+			    mng.getMostSpecializedClass(res.getTypes()),
+			    res.getURI()));
+		}
+	    } else {
+		Resource res = (Resource) content;
+		list.add(mng.getResource(
+			mng.getMostSpecializedClass(res.getTypes()),
+			res.getURI()));
+	    }
+	    return list;
+	} else {
+	    return null;
+	}
+    }]]></codefragment>
+   </duplication>
+   <duplication lines="37" tokens="137">
+      <file line="484"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinalityNativeStoreConnection.java"/>
+      <file line="51"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinCollect2NativeStoreConnection.java"/>
+      <file line="47"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinCollectNativeStoreConnection.java"/>
+      <codefragment><![CDATA[				if(hasMaxCardinality1(pred, contexts) && explicit){//Property has max/Card=1 & stmt not inferrd
+				    removeStatements(subj, pred, null, true, contexts);//rem. existing values so there is only 1
+				}
+				//END PATCH CARDINALITY
+				boolean wasNew = nativeStore.getTripleStore().storeTriple(subjID, predID, objID, contextID,
+						explicit);
+				result |= wasNew;
+
+				if (wasNew) {
+					// The triple was not yet present in the triple store
+					sailChangedEvent.setStatementsAdded(true);
+
+					if (hasConnectionListeners()) {
+						Statement st;
+
+						if (context != null) {
+							st = valueStore.createStatement(subj, pred, obj, context);
+						}
+						else {
+							st = valueStore.createStatement(subj, pred, obj);
+						}
+
+						notifyStatementAdded(st);
+					}
+				}
+			}
+		}
+		catch (IOException e) {
+			throw new SailException(e);
+		}
+		catch (RuntimeException e) {
+			logger.error("Encountered an unexpected problem while trying to add a statement", e);
+			throw e;
+		}
+
+		return result;
+	}]]></codefragment>
+   </duplication>
+   <duplication lines="25" tokens="125">
+      <file line="460"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinalityNativeStoreConnection.java"/>
+      <file line="24"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinCollect2NativeStoreConnection.java"/>
+      <file line="22"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinCollectNativeStoreConnection.java"/>
+      <codefragment><![CDATA[	protected boolean addStatement(Resource subj, URI pred, Value obj, boolean explicit, Resource... contexts)
+		throws SailException
+	{
+		OpenRDFUtil.verifyContextNotNull(contexts);
+
+		boolean result = false;
+
+		try {
+			ValueStore valueStore = nativeStore.getValueStore();
+			int subjID = valueStore.storeValue(subj);
+			int predID = valueStore.storeValue(pred);
+			int objID = valueStore.storeValue(obj);
+
+			if (contexts.length == 0) {
+				contexts = new Resource[] { null };
+			}
+
+			for (Resource context : contexts) {
+				int contextID = 0;
+				if (context != null) {
+					contextID = valueStore.storeValue(context);
+				}
+
+				//START PATCH CARDINALITY
+				if(hasMaxCardinality1(pred, contexts) && explicit){//Property has max/Card=1 & stmt not inferrd]]></codefragment>
+   </duplication>
+   <duplication lines="24" tokens="114">
+      <file line="286"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinalityNativeStoreConnection.java"/>
+      <file line="590"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinalityNativeStoreConnection.java"/>
+      <codefragment><![CDATA[			ValueStore valueStore = nativeStore.getValueStore();
+
+			int subjID = NativeValue.UNKNOWN_ID;
+			if (subj != null) {
+				subjID = valueStore.getID(subj);
+				if (subjID == NativeValue.UNKNOWN_ID) {
+					return 0;
+				}
+			}
+			int predID = NativeValue.UNKNOWN_ID;
+			if (pred != null) {
+				predID = valueStore.getID(pred);
+				if (predID == NativeValue.UNKNOWN_ID) {
+					return 0;
+				}
+			}
+			int objID = NativeValue.UNKNOWN_ID;
+			if (obj != null) {
+				objID = valueStore.getID(obj);
+				if (objID == NativeValue.UNKNOWN_ID) {
+					return 0;
+				}
+			}
+			List<Integer> contextIDs;]]></codefragment>
+   </duplication>
+   <duplication lines="13" tokens="112">
+      <file line="298"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.space.server\src\main\java\org\universAAL\context\space\serv\SCaller.java"/>
+      <file line="312"
+            path="D:\dev\uaal\GIT\platform\context\ctxt.space.server\src\main\java\org\universAAL\context\space\serv\SCaller.java"/>
+      <codefragment><![CDATA[    public Resource getProfOfServ(Resource input) {
+	String resultx = getResult(defaultCaller
+		.call(getDoSPARQLRequest(Queries.GETPRFOFPROFILABLEXTRA
+			.replace(Queries.ARG1, input.getURI()))));
+	Object objx = Activator.parser.deserialize(resultx);
+	if (objx == null)
+	    return null;
+	String result = getResult(defaultCaller
+		.call(getDoSPARQLRequest(Queries.GETPRFOFPROFILABLE.replace(
+			Queries.ARG1, input.getURI()))));
+	String uri = ((Resource) objx).getURI();
+	return (Resource) Activator.parser.deserialize(result, uri);
+    }]]></codefragment>
+   </duplication>
+   <duplication lines="34" tokens="105">
+      <file line="222"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\ValueStore.java"/>
+      <file line="290"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\ValueStore.java"/>
+      <codefragment><![CDATA[	public int getID(Value value)
+		throws IOException
+	{
+		// Try to get the internal ID from the value itself
+		boolean isOwnValue = isOwnValue(value);
+
+		if (isOwnValue) {
+			NativeValue nativeValue = (NativeValue)value;
+
+			if (revisionIsCurrent(nativeValue)) {
+				int id = nativeValue.getInternalID();
+
+				if (id != NativeValue.UNKNOWN_ID) {
+					return id;
+				}
+			}
+		}
+
+		// Check cache
+		Integer cachedID = valueIDCache.get(value);
+
+		if (cachedID != null) {
+			int id = cachedID.intValue();
+
+			if (isOwnValue) {
+				// Store id in value for fast access in any consecutive calls
+				((NativeValue)value).setInternalID(id, revision);
+			}
+
+			return id;
+		}
+
+		// ID not cached, search in file
+		byte[] data = value2data(value, false);]]></codefragment>
+   </duplication>
+   <duplication lines="23" tokens="102">
+      <file line="455"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinalityNativeStore.java"/>
+      <file line="288"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinalityNativeStoreConnection.java"/>
+      <file line="592"
+            path="D:\dev\uaal\GIT\platform\context\sesame.uaal.store\src\main\java\org\universAAL\context\sesame\sail\CardinalityNativeStoreConnection.java"/>
+      <codefragment><![CDATA[		int subjID = NativeValue.UNKNOWN_ID;
+		if (subj != null) {
+			subjID = valueStore.getID(subj);
+			if (subjID == NativeValue.UNKNOWN_ID) {
+				return 0;
+			}
+		}
+
+		int predID = NativeValue.UNKNOWN_ID;
+		if (pred != null) {
+			predID = valueStore.getID(pred);
+			if (predID == NativeValue.UNKNOWN_ID) {
+				return 0;
+			}
+		}
+
+		int objID = NativeValue.UNKNOWN_ID;
+		if (obj != null) {
+			objID = valueStore.getID(obj);
+			if (objID == NativeValue.UNKNOWN_ID) {
+				return 0;
+			}
+		}]]></codefragment>
+   </duplication>
+</pmd-cpd>

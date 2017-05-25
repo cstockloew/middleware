@@ -21,11 +21,11 @@ addons:
 
 before_install:
  - cd pom
- - (curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/settings.xml) > settings.xml
- - cp settings.xml $HOME/.m2/settings.xml
- - (curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/ci.sh) > ci.sh
- - chmod +x ci.sh
- - export MY_REPO="middleware"
+# - (curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/settings.xml) > settings.xml
+# - cp settings.xml $HOME/.m2/settings.xml
+# - (curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/ci.sh) > ci.sh
+# - chmod +x ci.sh
+# - export MY_REPO="middleware"
 
 install:
  -
@@ -35,10 +35,11 @@ before_script:
  - echo "MAVEN_OPTS='-Xmx2g'" > ~/.mavenrc
 
 script:
- - ./ci.sh script
+# - ./ci.sh script
+ - mvn org.universAAL.support:cigraph-maven-plugin:3.4.1-SNAPSHOT:cigraph -Dtoken=$CI_TOKEN -N -Djava.awt.headless=true
 
 after_success:
- - ./ci.sh success
+# - ./ci.sh success
 
 notifications:
   email: false
