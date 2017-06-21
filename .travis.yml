@@ -13,13 +13,15 @@ branches:
  - master
 
 env:
- - global:
+ global:
     secure: "dZRc32lyhribr0jRqqZzbhFVaaLZ0X+JfHWPb6ZSe5jRk0v9lTWXqjop/PKtcjE7/MB/VkCW4HC5JRWoy+Om2n3R0+84u7/+iGKz5lNh6Vm/NmUnyGrqnetsiHzzgFdSPz48vcpPcxItXLGbkXKw5Mac4qJ4QxFdku5cxY5WRfTHkDQysqyGPRoB7HxwD8Cp/Qcf05vBzUSNkad7vUVRdcNXujnGWex6TkdMGqqMjsSvuLUcIGLtpaG9M2lSISUseQ/F+oAyRBiPJdnUDLH4V0twz0n6LsN+5Bk5f8SDKAb/PEiuJzAJI6k8pMnCvlUA6hsMIyKgRzqa+sH1J60x80URnit6ax5z4U1Ufv5hioGGkPotvLW9Cn+qdGSB7RnUXPmbrWq5QG9J8t7vWq7+7JgVjSi42Ywv8kNj7ohc/z8KvDQo9QYwYeIoScDffM9cQy2z1RCU3wdJ19xFLuNdodU4rTdidqsI4UqsJ+IhifUA34VM/lbdhpdYwXYYWDruLIV4displTb7U6FuR9kz7L7e3nX45jznMToH9zcGDp67bM4DuyjS8N30R7C7ThqsAjK7w7CoJB/NpBoZNtIE3LBwFowrH2Pl0MHVoGNDzgLFx9OjSRdjBHQ9Mfhi/RXzd/Q7yZ12nHXSvYJdnORJlzxX0t3Zzw83ir6z1GlChyY="
- - ISOLATED=false
- - matrix:
+ matrix:
     - MAT=0
     - MAT=1
     - MAT=2
+
+env:
+  - ISOLATED=true
 
 matrix:
   fast_finish: true
