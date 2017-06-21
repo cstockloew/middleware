@@ -34,7 +34,7 @@ before_install:
 # - (curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/settings.xml) > settings.xml
 # - cp settings.xml $HOME/.m2/settings.xml
 # - (curl -s https://raw.githubusercontent.com/cstockloew/platform/master/uAAL.pom/src/scripts/ci.sh) > ci.sh
-# - chmod +x ci.sh
+ - chmod +x ../ci.sh
  - export MY_REPO="middleware"
 
 install:
