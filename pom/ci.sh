@@ -51,10 +51,14 @@ do_script() {
       mvn project-info-reports:index
       mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e
       find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} +
+      # after staging: remove everything except cobertura
+      export OLD_DIR=`pwd`
+      cd $HOME/site
+      ls | grep -v cobertura | xargs rm
+      cd "$OLD_DIR"
   fi
   
   if [[ $MAT == MAT_REPORT ]]; then
-      mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e
       mvn javadoc:aggregate -fae -e | grep -i "INFO] Build"
       mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Duaal.report=ci-repo -fn -e
       mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e
