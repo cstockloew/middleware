@@ -92,9 +92,9 @@ do_success() {
     publish_site
   fi
   
-  if [[ $MAT == MAT_DEPLOY ]]; then
+#  if [[ $MAT == MAT_DEPLOY ]]; then
     #mvn deploy -DskipTests -DaltDeploymentRepository=uaal-nightly::default::http://depot.universaal.org/maven-repo/nightly/ -fn | grep -i "INFO] Build"
-  fi
+#  fi
   
   #exit 0
   #export OLD_DIR=`pwd`
