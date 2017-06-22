@@ -53,9 +53,9 @@ do_script() {
       find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} +
       # after staging: remove everything except cobertura
       export OLD_DIR=`pwd`
-      cd $HOME/site
-      ls | grep -v cobertura | xargs rm
-      cd "$OLD_DIR"
+      #cd $HOME/site
+      find $HOME/site/ -type f | grep -v cobertura | xargs rm
+      #cd "$OLD_DIR"
   fi
   
   if [[ $MAT == MAT_REPORT ]]; then
