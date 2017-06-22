@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="c56984" href="./BusMemberRegistryImpl.html" title="org.universAAL.middleware.tracker.impl.BusMemberRegistryImpl" alt="" coords="16,17,181,42"/>
-<area shape="rect" id="node1" href="./BusMemberRegistryImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,5,192,53"/>
-<area shape="rect" id="c56985" href="./Activator.html" title="org.universAAL.middleware.tracker.impl.Activator" alt="" coords="226,17,299,42"/>
-<area shape="rect" id="node2" href="./Activator.html" title="&lt;TABLE&gt;" alt="" coords="216,5,309,53"/>
+<area shape="rect" id="c56984" href="./Activator.html" title="org.universAAL.middleware.tracker.impl.Activator" alt="" coords="15,17,89,42"/>
+<area shape="rect" id="node1" href="./Activator.html" title="&lt;TABLE&gt;" alt="" coords="5,5,99,53"/>
+<area shape="rect" id="c56985" href="./BusMemberRegistryImpl.html" title="org.universAAL.middleware.tracker.impl.BusMemberRegistryImpl" alt="" coords="133,17,299,42"/>
+<area shape="rect" id="node2" href="./BusMemberRegistryImpl.html" title="&lt;TABLE&gt;" alt="" coords="123,5,309,53"/>
 </map>

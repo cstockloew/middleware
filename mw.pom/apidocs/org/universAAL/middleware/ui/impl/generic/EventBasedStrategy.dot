@@ -16,20 +16,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../bus/model/BusStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.ui.impl.generic.EventBasedStrategy
-	c225729 [label=<<table title="org.universAAL.middleware.ui.impl.generic.EventBasedStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EventBasedStrategy.html">
+	c225730 [label=<<table title="org.universAAL.middleware.ui.impl.generic.EventBasedStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EventBasedStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> EventBasedStrategy </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./EventBasedStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.ui.impl.generic.CallBasedStrategy
-	c225734 [label=<<table title="org.universAAL.middleware.ui.impl.generic.CallBasedStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CallBasedStrategy.html">
+	c225731 [label=<<table title="org.universAAL.middleware.ui.impl.generic.CallBasedStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CallBasedStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CallBasedStrategy </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CallBasedStrategy.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.ui.impl.generic.EventBasedStrategy extends org.universAAL.middleware.bus.model.BusStrategy
-	c225603:p -> c225729:p [dir=back,arrowtail=empty];
+	c225603:p -> c225730:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.ui.impl.generic.CallBasedStrategy extends org.universAAL.middleware.ui.impl.generic.EventBasedStrategy
-	c225729:p -> c225734:p [dir=back,arrowtail=empty];
+	c225730:p -> c225731:p [dir=back,arrowtail=empty];
 }
 

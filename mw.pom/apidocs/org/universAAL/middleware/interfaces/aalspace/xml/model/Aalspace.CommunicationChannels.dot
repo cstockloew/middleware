@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.interfaces.aalspace.model.ICommunicationChannels
-	c108631 [label=<<table title="org.universAAL.middleware.interfaces.aalspace.model.ICommunicationChannels" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../model/ICommunicationChannels.html">
+	c108629 [label=<<table title="org.universAAL.middleware.interfaces.aalspace.model.ICommunicationChannels" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../model/ICommunicationChannels.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ICommunicationChannels </td></tr>
@@ -25,7 +25,7 @@ digraph G {
 	//org.universAAL.middleware.interfaces.aalspace.xml.model.Aalspace.CommunicationChannels implements java.io.Serializable
 	c109167:p -> c108637:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.interfaces.aalspace.xml.model.Aalspace.CommunicationChannels implements org.universAAL.middleware.interfaces.aalspace.model.ICommunicationChannels
-	c108631:p -> c108637:p [dir=back,arrowtail=empty,style=dashed];
+	c108629:p -> c108637:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
 	c109167 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

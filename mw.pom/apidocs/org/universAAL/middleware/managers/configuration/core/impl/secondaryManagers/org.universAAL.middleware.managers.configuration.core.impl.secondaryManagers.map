@@ -1,16 +1,16 @@
 <map id="G" name="G">
 <area shape="rect" id="c39245" href="./SynchronousConfEntityManager.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.SynchronousConfEntityManager" alt="" coords="15,19,225,45"/>
 <area shape="rect" id="node1" href="./SynchronousConfEntityManager.html" title="&lt;TABLE&gt;" alt="" coords="5,8,235,56"/>
-<area shape="rect" id="c39246" href="./SharedObjectConnector.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.SharedObjectConnector" alt="" coords="269,19,429,45"/>
-<area shape="rect" id="node2" href="./SharedObjectConnector.html" title="&lt;TABLE&gt;" alt="" coords="259,8,440,56"/>
-<area shape="rect" id="c39247" href="./PendingRequestsManager.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.PendingRequestsManager" alt="" coords="475,19,648,45"/>
-<area shape="rect" id="node3" href="./PendingRequestsManager.html" title="&lt;TABLE&gt;" alt="" coords="464,8,659,56"/>
-<area shape="rect" id="c39248" href="./ModuleRegistry.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.ModuleRegistry" alt="" coords="693,19,805,45"/>
-<area shape="rect" id="node4" href="./ModuleRegistry.html" title="&lt;TABLE&gt;" alt="" coords="683,8,816,56"/>
-<area shape="rect" id="c39249" href="./FileManagement.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.FileManagement" alt="" coords="851,11,968,53"/>
-<area shape="rect" id="node5" href="./FileManagement.html" title="&lt;TABLE&gt;" alt="" coords="840,6,979,58"/>
-<area shape="rect" id="c39250" href="./EntityManager.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.EntityManager" alt="" coords="1013,19,1118,45"/>
-<area shape="rect" id="node6" href="./EntityManager.html" title="&lt;TABLE&gt;" alt="" coords="1003,8,1128,56"/>
-<area shape="rect" id="c39251" href="./ConfigurationEditorPool.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.ConfigurationEditorPool" alt="" coords="1163,19,1320,45"/>
-<area shape="rect" id="node7" href="./ConfigurationEditorPool.html" title="&lt;TABLE&gt;" alt="" coords="1152,8,1331,56"/>
+<area shape="rect" id="c39246" href="./ModuleRegistry.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.ModuleRegistry" alt="" coords="269,19,381,45"/>
+<area shape="rect" id="node2" href="./ModuleRegistry.html" title="&lt;TABLE&gt;" alt="" coords="259,8,392,56"/>
+<area shape="rect" id="c39247" href="./PendingRequestsManager.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.PendingRequestsManager" alt="" coords="427,19,600,45"/>
+<area shape="rect" id="node3" href="./PendingRequestsManager.html" title="&lt;TABLE&gt;" alt="" coords="416,8,611,56"/>
+<area shape="rect" id="c39248" href="./ConfigurationEditorPool.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.ConfigurationEditorPool" alt="" coords="645,19,803,45"/>
+<area shape="rect" id="node4" href="./ConfigurationEditorPool.html" title="&lt;TABLE&gt;" alt="" coords="635,8,813,56"/>
+<area shape="rect" id="c39249" href="./FileManagement.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.FileManagement" alt="" coords="848,11,965,53"/>
+<area shape="rect" id="node5" href="./FileManagement.html" title="&lt;TABLE&gt;" alt="" coords="837,6,976,58"/>
+<area shape="rect" id="c39250" href="./SharedObjectConnector.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.SharedObjectConnector" alt="" coords="1011,19,1171,45"/>
+<area shape="rect" id="node6" href="./SharedObjectConnector.html" title="&lt;TABLE&gt;" alt="" coords="1000,8,1181,56"/>
+<area shape="rect" id="c39251" href="./EntityManager.html" title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.EntityManager" alt="" coords="1215,19,1321,45"/>
+<area shape="rect" id="node7" href="./EntityManager.html" title="&lt;TABLE&gt;" alt="" coords="1205,8,1331,56"/>
 </map>

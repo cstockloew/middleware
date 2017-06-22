@@ -17,12 +17,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FileManagement.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.managers.configuration.osgi.FileProvider
-	c230216 [label=<<table title="org.universAAL.middleware.managers.configuration.osgi.FileProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../osgi/FileProvider.html">
+	c230215 [label=<<table title="org.universAAL.middleware.managers.configuration.osgi.FileProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../osgi/FileProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FileProvider </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../osgi/FileProvider.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.managers.configuration.osgi.FileProvider implements org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.FileManagement
-	c229981:p -> c230216:p [dir=back,arrowtail=empty,style=dashed];
+	c229981:p -> c230215:p [dir=back,arrowtail=empty,style=dashed];
 }
 

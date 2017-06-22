@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="c184616" href="../rdf/FinalizedResource.html" title="org.universAAL.middleware.rdf.FinalizedResource" alt="" coords="15,19,145,45"/>
+<area shape="rect" id="c184613" href="../rdf/FinalizedResource.html" title="org.universAAL.middleware.rdf.FinalizedResource" alt="" coords="15,19,145,45"/>
 <area shape="rect" id="node1" href="../rdf/FinalizedResource.html" title="&lt;TABLE&gt;" alt="" coords="5,8,155,56"/>
-<area shape="rect" id="c184862" href="./ContextEventPattern.html" title="org.universAAL.middleware.context.ContextEventPattern" alt="" coords="165,118,307,143"/>
+<area shape="rect" id="c184863" href="./ContextEventPattern.html" title="org.universAAL.middleware.context.ContextEventPattern" alt="" coords="165,118,307,143"/>
 <area shape="rect" id="node4" href="./ContextEventPattern.html" title="&lt;TABLE&gt;" alt="" coords="155,107,317,155"/>
-<area shape="rect" id="c184842" href="../bus/model/matchable/Subscription.html" title="org.universAAL.middleware.bus.model.matchable.Subscription" alt="" coords="189,11,283,53"/>
+<area shape="rect" id="c184840" href="../bus/model/matchable/Subscription.html" title="org.universAAL.middleware.bus.model.matchable.Subscription" alt="" coords="189,11,283,53"/>
 <area shape="rect" id="node2" href="../bus/model/matchable/Subscription.html" title="&lt;TABLE&gt;" alt="" coords="179,6,293,58"/>
-<area shape="rect" id="c184847" href="../bus/model/matchable/EventAdvertisement.html" title="org.universAAL.middleware.bus.model.matchable.EventAdvertisement" alt="" coords="328,11,467,53"/>
+<area shape="rect" id="c184842" href="../bus/model/matchable/EventAdvertisement.html" title="org.universAAL.middleware.bus.model.matchable.EventAdvertisement" alt="" coords="328,11,467,53"/>
 <area shape="rect" id="node3" href="../bus/model/matchable/EventAdvertisement.html" title="&lt;TABLE&gt;" alt="" coords="317,6,477,58"/>
 </map>

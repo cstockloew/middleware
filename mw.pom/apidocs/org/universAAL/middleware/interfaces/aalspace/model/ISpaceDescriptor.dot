@@ -10,13 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.aalspace.json.model.AALSpace.SpaceDescriptor
-	c256601 [label=<<table title="org.universAAL.middleware.aalspace.json.model.AALSpace.SpaceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../aalspace/json/model/AALSpace.SpaceDescriptor.html">
+	c256600 [label=<<table title="org.universAAL.middleware.aalspace.json.model.AALSpace.SpaceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../aalspace/json/model/AALSpace.SpaceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SpaceDescriptor </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../aalspace/json/model/AALSpace.SpaceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.interfaces.aalspace.model.ISpaceDescriptor
-	c256657 [label=<<table title="org.universAAL.middleware.interfaces.aalspace.model.ISpaceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ISpaceDescriptor.html">
+	c256660 [label=<<table title="org.universAAL.middleware.interfaces.aalspace.model.ISpaceDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ISpaceDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ISpaceDescriptor </td></tr>
@@ -29,8 +29,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../xml/model/Aalspace.SpaceDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.aalspace.json.model.AALSpace.SpaceDescriptor implements org.universAAL.middleware.interfaces.aalspace.model.ISpaceDescriptor
-	c256657:p -> c256601:p [dir=back,arrowtail=empty,style=dashed];
+	c256660:p -> c256600:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.interfaces.aalspace.xml.model.Aalspace.SpaceDescriptor implements org.universAAL.middleware.interfaces.aalspace.model.ISpaceDescriptor
-	c256657:p -> c256667:p [dir=back,arrowtail=empty,style=dashed];
+	c256660:p -> c256667:p [dir=back,arrowtail=empty,style=dashed];
 }
 

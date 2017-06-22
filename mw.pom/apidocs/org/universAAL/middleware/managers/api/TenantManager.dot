@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.managers.api.TenantManager
-	c398636 [label=<<table title="org.universAAL.middleware.managers.api.TenantManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TenantManager.html">
+	c398634 [label=<<table title="org.universAAL.middleware.managers.api.TenantManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TenantManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TenantManager </td></tr>
@@ -30,8 +30,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../tenant/TenantManagerImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.managers.api.TenantManager implements org.universAAL.middleware.managers.api.Manager
-	c398639:p -> c398636:p [dir=back,arrowtail=empty,style=dashed];
+	c398639:p -> c398634:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.managers.tenant.TenantManagerImpl implements org.universAAL.middleware.managers.api.TenantManager
-	c398636:p -> c398664:p [dir=back,arrowtail=empty,style=dashed];
+	c398634:p -> c398664:p [dir=back,arrowtail=empty,style=dashed];
 }
 

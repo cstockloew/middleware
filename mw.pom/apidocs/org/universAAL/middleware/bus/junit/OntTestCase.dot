@@ -16,12 +16,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OntTestCase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.bus.junit.BusTestCase
-	c311680 [label=<<table title="org.universAAL.middleware.bus.junit.BusTestCase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BusTestCase.html">
+	c311678 [label=<<table title="org.universAAL.middleware.bus.junit.BusTestCase" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BusTestCase.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BusTestCase </td></tr>
 		</table></td></tr>
 		</table>>, URL="./BusTestCase.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.bus.junit.OntTestCase extends org.universAAL.middleware.bus.junit.BusTestCase
-	c311680:p -> c311677:p [dir=back,arrowtail=empty];
+	c311678:p -> c311677:p [dir=back,arrowtail=empty];
 }
 

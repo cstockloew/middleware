@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.managers.api.AALSpaceListener
-	c83127 [label=<<table title="org.universAAL.middleware.managers.api.AALSpaceListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AALSpaceListener.html">
+	c83137 [label=<<table title="org.universAAL.middleware.managers.api.AALSpaceListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AALSpaceListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> AALSpaceListener </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../deploy/DeployManagerImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.ui.impl.generic.CoordinatedStrategy
-	c83320 [label=<<table title="org.universAAL.middleware.ui.impl.generic.CoordinatedStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../ui/impl/generic/CoordinatedStrategy.html">
+	c83322 [label=<<table title="org.universAAL.middleware.ui.impl.generic.CoordinatedStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../ui/impl/generic/CoordinatedStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CoordinatedStrategy </td></tr>
 		</table></td></tr>
@@ -35,18 +35,18 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../distributedmw/impl/SpaceListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.managers.distributedmw.impl.ListenerHandler<T>
-	c83388 [label=<<table title="org.universAAL.middleware.managers.distributedmw.impl.ListenerHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../distributedmw/impl/ListenerHandler.html">
+	c83391 [label=<<table title="org.universAAL.middleware.managers.distributedmw.impl.ListenerHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../distributedmw/impl/ListenerHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ListenerHandler&lt;T&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../distributedmw/impl/ListenerHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.managers.deploy.DeployManagerImpl implements org.universAAL.middleware.managers.api.AALSpaceListener
-	c83127:p -> c83159:p [dir=back,arrowtail=empty,style=dashed];
+	c83137:p -> c83159:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.ui.impl.generic.CoordinatedStrategy implements org.universAAL.middleware.managers.api.AALSpaceListener
-	c83127:p -> c83320:p [dir=back,arrowtail=empty,style=dashed];
+	c83137:p -> c83322:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.managers.distributedmw.impl.SpaceListener implements org.universAAL.middleware.managers.api.AALSpaceListener
-	c83127:p -> c83383:p [dir=back,arrowtail=empty,style=dashed];
+	c83137:p -> c83383:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.managers.distributedmw.impl.ListenerHandler<T> implements org.universAAL.middleware.managers.api.AALSpaceListener
-	c83127:p -> c83388:p [dir=back,arrowtail=empty,style=dashed];
+	c83137:p -> c83391:p [dir=back,arrowtail=empty,style=dashed];
 }
 

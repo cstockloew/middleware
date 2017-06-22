@@ -17,12 +17,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./IBusMemberRegistry.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.tracker.impl.BusMemberRegistryImpl
-	c245209 [label=<<table title="org.universAAL.middleware.tracker.impl.BusMemberRegistryImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/BusMemberRegistryImpl.html">
+	c245210 [label=<<table title="org.universAAL.middleware.tracker.impl.BusMemberRegistryImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/BusMemberRegistryImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BusMemberRegistryImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/BusMemberRegistryImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.tracker.impl.BusMemberRegistryImpl implements org.universAAL.middleware.tracker.IBusMemberRegistry
-	c245207:p -> c245209:p [dir=back,arrowtail=empty,style=dashed];
+	c245207:p -> c245210:p [dir=back,arrowtail=empty,style=dashed];
 }
 

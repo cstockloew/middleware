@@ -9,6 +9,13 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// org.universAAL.middleware.managers.api.DeployManager
+	c201075 [label=<<table title="org.universAAL.middleware.managers.api.DeployManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DeployManager.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> DeployManager </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DeployManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.managers.api.Manager
 	c201082 [label=<<table title="org.universAAL.middleware.managers.api.Manager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Manager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -16,13 +23,6 @@ digraph G {
 <tr><td align="center" balign="center"> Manager </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Manager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// org.universAAL.middleware.managers.api.DeployManager
-	c201087 [label=<<table title="org.universAAL.middleware.managers.api.DeployManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DeployManager.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> DeployManager </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DeployManager.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.managers.deploy.DeployManagerImpl
 	c201108 [label=<<table title="org.universAAL.middleware.managers.deploy.DeployManagerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../deploy/DeployManagerImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -30,8 +30,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../deploy/DeployManagerImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.managers.api.DeployManager implements org.universAAL.middleware.managers.api.Manager
-	c201082:p -> c201087:p [dir=back,arrowtail=empty,style=dashed];
+	c201082:p -> c201075:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.managers.deploy.DeployManagerImpl implements org.universAAL.middleware.managers.api.DeployManager
-	c201087:p -> c201108:p [dir=back,arrowtail=empty,style=dashed];
+	c201075:p -> c201108:p [dir=back,arrowtail=empty,style=dashed];
 }
 

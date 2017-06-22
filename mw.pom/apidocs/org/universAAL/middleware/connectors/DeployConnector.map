@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="c200396" href="./DeployConnector.html" title="org.universAAL.middleware.connectors.DeployConnector" alt="" coords="31,113,153,154"/>
+<area shape="rect" id="c200394" href="./DeployConnector.html" title="org.universAAL.middleware.connectors.DeployConnector" alt="" coords="31,113,153,154"/>
 <area shape="rect" id="node1" href="./DeployConnector.html" title="&lt;TABLE&gt;" alt="" coords="21,107,163,159"/>
 <area shape="rect" id="c200738" href="./deploy/karaf/KarafDeployConnector.html" title="org.universAAL.middleware.connectors.deploy.karaf.KarafDeployConnector" alt="" coords="15,219,169,245"/>
 <area shape="rect" id="node3" href="./deploy/karaf/KarafDeployConnector.html" title="&lt;TABLE&gt;" alt="" coords="5,208,179,256"/>

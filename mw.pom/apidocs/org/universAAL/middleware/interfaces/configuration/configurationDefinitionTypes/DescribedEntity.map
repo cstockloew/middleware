@@ -1,12 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="c209737" href="./DescribedEntity.html" title="org.universAAL.middleware.interfaces.configuration.configurationDefinitionTypes.DescribedEntity" alt="" coords="323,11,437,53"/>
-<area shape="rect" id="node1" href="./DescribedEntity.html" title="&lt;TABLE&gt;" alt="" coords="313,6,447,58"/>
-<area shape="rect" id="c209738" href="./ConfigurationParameter.html" title="org.universAAL.middleware.interfaces.configuration.configurationDefinitionTypes.ConfigurationParameter" alt="" coords="16,113,173,154"/>
-<area shape="rect" id="node2" href="./ConfigurationParameter.html" title="&lt;TABLE&gt;" alt="" coords="5,107,184,159"/>
-<area shape="rect" id="c209739" href="./ConfigurationFile.html" title="org.universAAL.middleware.interfaces.configuration.configurationDefinitionTypes.ConfigurationFile" alt="" coords="218,113,337,154"/>
-<area shape="rect" id="node3" href="./ConfigurationFile.html" title="&lt;TABLE&gt;" alt="" coords="208,107,347,159"/>
-<area shape="rect" id="c209740" href="./ConfigurationDefinedElsewhere.html" title="org.universAAL.middleware.interfaces.configuration.configurationDefinitionTypes.ConfigurationDefinedElsewhere" alt="" coords="381,121,585,146"/>
-<area shape="rect" id="node4" href="./ConfigurationDefinedElsewhere.html" title="&lt;TABLE&gt;" alt="" coords="371,109,595,157"/>
-<area shape="rect" id="c209744" href="../configurationEditionTypes/ConfigurableEntityEditor.html" title="org.universAAL.middleware.interfaces.configuration.configurationEditionTypes.ConfigurableEntityEditor" alt="" coords="629,113,790,154"/>
+<area shape="rect" id="c209737" href="./ConfigurationParameter.html" title="org.universAAL.middleware.interfaces.configuration.configurationDefinitionTypes.ConfigurationParameter" alt="" coords="16,113,173,154"/>
+<area shape="rect" id="node1" href="./ConfigurationParameter.html" title="&lt;TABLE&gt;" alt="" coords="5,107,184,159"/>
+<area shape="rect" id="c209738" href="./ConfigurationDefinedElsewhere.html" title="org.universAAL.middleware.interfaces.configuration.configurationDefinitionTypes.ConfigurationDefinedElsewhere" alt="" coords="218,121,422,146"/>
+<area shape="rect" id="node2" href="./ConfigurationDefinedElsewhere.html" title="&lt;TABLE&gt;" alt="" coords="208,109,432,157"/>
+<area shape="rect" id="c209739" href="./DescribedEntity.html" title="org.universAAL.middleware.interfaces.configuration.configurationDefinitionTypes.DescribedEntity" alt="" coords="366,11,479,53"/>
+<area shape="rect" id="node3" href="./DescribedEntity.html" title="&lt;TABLE&gt;" alt="" coords="356,6,489,58"/>
+<area shape="rect" id="c209740" href="./ConfigurationFile.html" title="org.universAAL.middleware.interfaces.configuration.configurationDefinitionTypes.ConfigurationFile" alt="" coords="466,113,585,154"/>
+<area shape="rect" id="node4" href="./ConfigurationFile.html" title="&lt;TABLE&gt;" alt="" coords="456,107,595,159"/>
+<area shape="rect" id="c209743" href="../configurationEditionTypes/ConfigurableEntityEditor.html" title="org.universAAL.middleware.interfaces.configuration.configurationEditionTypes.ConfigurableEntityEditor" alt="" coords="629,113,790,154"/>
 <area shape="rect" id="node5" href="../configurationEditionTypes/ConfigurableEntityEditor.html" title="&lt;TABLE&gt;" alt="" coords="619,107,800,159"/>
 </map>

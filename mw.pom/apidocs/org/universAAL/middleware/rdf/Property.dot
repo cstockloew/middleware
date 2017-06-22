@@ -9,35 +9,35 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// org.universAAL.middleware.owl.ObjectProperty
-	c333832 [label=<<table title="org.universAAL.middleware.owl.ObjectProperty" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../owl/ObjectProperty.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> ObjectProperty </td></tr>
-		</table></td></tr>
-		</table>>, URL="../owl/ObjectProperty.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.owl.DatatypeProperty
-	c333848 [label=<<table title="org.universAAL.middleware.owl.DatatypeProperty" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../owl/DatatypeProperty.html">
+	c333816 [label=<<table title="org.universAAL.middleware.owl.DatatypeProperty" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../owl/DatatypeProperty.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DatatypeProperty </td></tr>
 		</table></td></tr>
 		</table>>, URL="../owl/DatatypeProperty.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// org.universAAL.middleware.owl.ObjectProperty
+	c333821 [label=<<table title="org.universAAL.middleware.owl.ObjectProperty" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../owl/ObjectProperty.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ObjectProperty </td></tr>
+		</table></td></tr>
+		</table>>, URL="../owl/ObjectProperty.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.rdf.Property
-	c333875 [label=<<table title="org.universAAL.middleware.rdf.Property" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Property.html">
+	c333869 [label=<<table title="org.universAAL.middleware.rdf.Property" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Property.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Property </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Property.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.rdf.FinalizedResource
-	c333880 [label=<<table title="org.universAAL.middleware.rdf.FinalizedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FinalizedResource.html">
+	c333877 [label=<<table title="org.universAAL.middleware.rdf.FinalizedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FinalizedResource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FinalizedResource </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FinalizedResource.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	//org.universAAL.middleware.owl.ObjectProperty extends org.universAAL.middleware.rdf.Property
-	c333875:p -> c333832:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.owl.DatatypeProperty extends org.universAAL.middleware.rdf.Property
-	c333875:p -> c333848:p [dir=back,arrowtail=empty];
+	c333869:p -> c333816:p [dir=back,arrowtail=empty];
+	//org.universAAL.middleware.owl.ObjectProperty extends org.universAAL.middleware.rdf.Property
+	c333869:p -> c333821:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.rdf.Property extends org.universAAL.middleware.rdf.FinalizedResource
-	c333880:p -> c333875:p [dir=back,arrowtail=empty];
+	c333877:p -> c333869:p [dir=back,arrowtail=empty];
 }
 

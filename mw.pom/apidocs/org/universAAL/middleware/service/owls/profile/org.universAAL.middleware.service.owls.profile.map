@@ -1,16 +1,16 @@
 <map id="G" name="G">
 <area shape="rect" id="c51905" href="./SingleLocationParameter.html" title="org.universAAL.middleware.service.owls.profile.SingleLocationParameter" alt="" coords="16,113,181,138"/>
 <area shape="rect" id="node1" href="./SingleLocationParameter.html" title="&lt;TABLE&gt;" alt="" coords="5,101,192,149"/>
-<area shape="rect" id="c51906" href="./ServiceProfile.html" title="org.universAAL.middleware.service.owls.profile.ServiceProfile" alt="" coords="611,17,712,42"/>
-<area shape="rect" id="node2" href="./ServiceProfile.html" title="&lt;TABLE&gt;" alt="" coords="600,5,723,53"/>
-<area shape="rect" id="c51907" href="./ResponseTimeInMilliseconds.html" title="org.universAAL.middleware.service.owls.profile.ResponseTimeInMilliseconds" alt="" coords="227,113,419,138"/>
-<area shape="rect" id="node3" href="./ResponseTimeInMilliseconds.html" title="&lt;TABLE&gt;" alt="" coords="216,101,429,149"/>
-<area shape="rect" id="c51908" href="./QoSRating.html" title="org.universAAL.middleware.service.owls.profile.QoSRating" alt="" coords="464,113,549,138"/>
-<area shape="rect" id="node4" href="./QoSRating.html" title="&lt;TABLE&gt;" alt="" coords="453,101,560,149"/>
-<area shape="rect" id="c51909" href="./ProfileParameter.html" title="org.universAAL.middleware.service.owls.profile.ProfileParameter" alt="" coords="448,17,565,42"/>
-<area shape="rect" id="node5" href="./ProfileParameter.html" title="&lt;TABLE&gt;" alt="" coords="437,5,576,53"/>
-<area shape="rect" id="c51910" href="./NumberOfSamples.html" title="org.universAAL.middleware.service.owls.profile.NumberOfSamples" alt="" coords="594,113,726,138"/>
-<area shape="rect" id="node6" href="./NumberOfSamples.html" title="&lt;TABLE&gt;" alt="" coords="584,101,736,149"/>
-<area shape="rect" id="c51911" href="./MultiLocationParameter.html" title="org.universAAL.middleware.service.owls.profile.MultiLocationParameter" alt="" coords="771,113,928,138"/>
-<area shape="rect" id="node7" href="./MultiLocationParameter.html" title="&lt;TABLE&gt;" alt="" coords="760,101,939,149"/>
+<area shape="rect" id="c51906" href="./NumberOfSamples.html" title="org.universAAL.middleware.service.owls.profile.NumberOfSamples" alt="" coords="226,113,358,138"/>
+<area shape="rect" id="node2" href="./NumberOfSamples.html" title="&lt;TABLE&gt;" alt="" coords="216,101,368,149"/>
+<area shape="rect" id="c51907" href="./QoSRating.html" title="org.universAAL.middleware.service.owls.profile.QoSRating" alt="" coords="403,113,488,138"/>
+<area shape="rect" id="node3" href="./QoSRating.html" title="&lt;TABLE&gt;" alt="" coords="392,101,499,149"/>
+<area shape="rect" id="c51908" href="./ResponseTimeInMilliseconds.html" title="org.universAAL.middleware.service.owls.profile.ResponseTimeInMilliseconds" alt="" coords="533,113,725,138"/>
+<area shape="rect" id="node4" href="./ResponseTimeInMilliseconds.html" title="&lt;TABLE&gt;" alt="" coords="523,101,736,149"/>
+<area shape="rect" id="c51909" href="./ProfileParameter.html" title="org.universAAL.middleware.service.owls.profile.ProfileParameter" alt="" coords="387,17,504,42"/>
+<area shape="rect" id="node5" href="./ProfileParameter.html" title="&lt;TABLE&gt;" alt="" coords="376,5,515,53"/>
+<area shape="rect" id="c51910" href="./MultiLocationParameter.html" title="org.universAAL.middleware.service.owls.profile.MultiLocationParameter" alt="" coords="771,113,928,138"/>
+<area shape="rect" id="node6" href="./MultiLocationParameter.html" title="&lt;TABLE&gt;" alt="" coords="760,101,939,149"/>
+<area shape="rect" id="c51911" href="./ServiceProfile.html" title="org.universAAL.middleware.service.owls.profile.ServiceProfile" alt="" coords="549,17,651,42"/>
+<area shape="rect" id="node7" href="./ServiceProfile.html" title="&lt;TABLE&gt;" alt="" coords="539,5,661,53"/>
 </map>

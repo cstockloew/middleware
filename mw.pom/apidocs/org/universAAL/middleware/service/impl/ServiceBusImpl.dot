@@ -16,21 +16,21 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../bus/model/AbstractBus.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.service.ServiceBus
-	c368653 [label=<<table title="org.universAAL.middleware.service.ServiceBus" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceBus.html">
+	c368659 [label=<<table title="org.universAAL.middleware.service.ServiceBus" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ServiceBus.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceBus </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ServiceBus.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.service.impl.ServiceBusImpl
-	c368681 [label=<<table title="org.universAAL.middleware.service.impl.ServiceBusImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceBusImpl.html">
+	c368678 [label=<<table title="org.universAAL.middleware.service.impl.ServiceBusImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ServiceBusImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ServiceBusImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ServiceBusImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.service.impl.ServiceBusImpl extends org.universAAL.middleware.bus.model.AbstractBus
-	c368595:p -> c368681:p [dir=back,arrowtail=empty];
+	c368595:p -> c368678:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.service.impl.ServiceBusImpl implements org.universAAL.middleware.service.ServiceBus
-	c368653:p -> c368681:p [dir=back,arrowtail=empty,style=dashed];
+	c368659:p -> c368678:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -16,14 +16,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OSGiPlatformAbstraction.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// ch.ethz.iks.slp.impl.PlatformAbstraction
-	c306124 [label=<<table title="ch.ethz.iks.slp.impl.PlatformAbstraction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlatformAbstraction.html">
+	c306125 [label=<<table title="ch.ethz.iks.slp.impl.PlatformAbstraction" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlatformAbstraction.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PlatformAbstraction </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PlatformAbstraction.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//ch.ethz.iks.slp.impl.OSGiPlatformAbstraction implements ch.ethz.iks.slp.impl.PlatformAbstraction
-	c306124:p -> c306118:p [dir=back,arrowtail=empty,style=dashed];
+	c306125:p -> c306118:p [dir=back,arrowtail=empty,style=dashed];
 	//ch.ethz.iks.slp.impl.OSGiPlatformAbstraction implements org.osgi.framework.ServiceListener
 	c306739:p -> c306118:p [dir=back,arrowtail=empty,style=dashed];
 	// org.osgi.framework.ServiceListener

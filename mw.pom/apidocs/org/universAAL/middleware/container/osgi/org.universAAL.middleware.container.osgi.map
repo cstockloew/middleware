@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="c62040" href="./uAALBundleContext.html" title="org.universAAL.middleware.container.osgi.uAALBundleContext" alt="" coords="16,19,155,45"/>
-<area shape="rect" id="node1" href="./uAALBundleContext.html" title="&lt;TABLE&gt;" alt="" coords="5,8,165,56"/>
-<area shape="rect" id="c62041" href="./uAALBundleContainer.html" title="org.universAAL.middleware.container.osgi.uAALBundleContainer" alt="" coords="200,19,349,45"/>
-<area shape="rect" id="node2" href="./uAALBundleContainer.html" title="&lt;TABLE&gt;" alt="" coords="189,8,360,56"/>
-<area shape="rect" id="c62042" href="./OSGiAttributes.html" title="org.universAAL.middleware.container.osgi.OSGiAttributes" alt="" coords="395,11,504,53"/>
-<area shape="rect" id="node3" href="./OSGiAttributes.html" title="&lt;TABLE&gt;" alt="" coords="384,6,515,58"/>
+<area shape="rect" id="c62040" href="./OSGiAttributes.html" title="org.universAAL.middleware.container.osgi.OSGiAttributes" alt="" coords="16,11,125,53"/>
+<area shape="rect" id="node1" href="./OSGiAttributes.html" title="&lt;TABLE&gt;" alt="" coords="5,6,136,58"/>
+<area shape="rect" id="c62041" href="./uAALBundleContext.html" title="org.universAAL.middleware.container.osgi.uAALBundleContext" alt="" coords="171,19,309,45"/>
+<area shape="rect" id="node2" href="./uAALBundleContext.html" title="&lt;TABLE&gt;" alt="" coords="160,8,320,56"/>
+<area shape="rect" id="c62042" href="./uAALBundleContainer.html" title="org.universAAL.middleware.container.osgi.uAALBundleContainer" alt="" coords="355,19,504,45"/>
+<area shape="rect" id="node3" href="./uAALBundleContainer.html" title="&lt;TABLE&gt;" alt="" coords="344,8,515,56"/>
 </map>

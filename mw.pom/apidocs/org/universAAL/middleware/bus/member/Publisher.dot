@@ -22,7 +22,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BusMember.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.context.ContextPublisher
-	c338514 [label=<<table title="org.universAAL.middleware.context.ContextPublisher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../context/ContextPublisher.html">
+	c338519 [label=<<table title="org.universAAL.middleware.context.ContextPublisher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../context/ContextPublisher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ContextPublisher </font></td></tr>
 		</table></td></tr>
@@ -30,6 +30,6 @@ digraph G {
 	//org.universAAL.middleware.bus.member.Publisher extends org.universAAL.middleware.bus.member.BusMember
 	c338489:p -> c338485:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.context.ContextPublisher extends org.universAAL.middleware.bus.member.Publisher
-	c338485:p -> c338514:p [dir=back,arrowtail=empty];
+	c338485:p -> c338519:p [dir=back,arrowtail=empty];
 }
 

@@ -1,20 +1,20 @@
 <map id="G" name="G">
-<area shape="rect" id="c403429" href="./Union.html" title="org.universAAL.middleware.owl.Union" alt="" coords="15,209,70,234"/>
+<area shape="rect" id="c403433" href="./Union.html" title="org.universAAL.middleware.owl.Union" alt="" coords="15,209,70,234"/>
 <area shape="rect" id="node1" href="./Union.html" title="&lt;TABLE&gt;" alt="" coords="5,197,80,245"/>
-<area shape="rect" id="c403431" href="./TypeURI.html" title="org.universAAL.middleware.owl.TypeURI" alt="" coords="114,209,187,234"/>
-<area shape="rect" id="node2" href="./TypeURI.html" title="&lt;TABLE&gt;" alt="" coords="104,197,197,245"/>
-<area shape="rect" id="c403432" href="./TypeRestriction.html" title="org.universAAL.middleware.owl.TypeRestriction" alt="" coords="231,209,345,234"/>
-<area shape="rect" id="node3" href="./TypeRestriction.html" title="&lt;TABLE&gt;" alt="" coords="221,197,355,245"/>
-<area shape="rect" id="c403435" href="./TypeExpression.html" title="org.universAAL.middleware.owl.TypeExpression" alt="" coords="399,113,513,138"/>
-<area shape="rect" id="node4" href="./TypeExpression.html" title="&lt;TABLE&gt;" alt="" coords="388,101,524,149"/>
-<area shape="rect" id="c403439" href="./PropertyRestriction.html" title="org.universAAL.middleware.owl.PropertyRestriction" alt="" coords="389,209,523,234"/>
-<area shape="rect" id="node5" href="./PropertyRestriction.html" title="&lt;TABLE&gt;" alt="" coords="379,197,533,245"/>
-<area shape="rect" id="c403454" href="./Intersection.html" title="org.universAAL.middleware.owl.Intersection" alt="" coords="567,209,657,234"/>
-<area shape="rect" id="node6" href="./Intersection.html" title="&lt;TABLE&gt;" alt="" coords="557,197,667,245"/>
-<area shape="rect" id="c403460" href="./Enumeration.html" title="org.universAAL.middleware.owl.Enumeration" alt="" coords="701,209,795,234"/>
-<area shape="rect" id="node7" href="./Enumeration.html" title="&lt;TABLE&gt;" alt="" coords="691,197,805,245"/>
-<area shape="rect" id="c403465" href="./Complement.html" title="org.universAAL.middleware.owl.Complement" alt="" coords="839,209,934,234"/>
-<area shape="rect" id="node8" href="./Complement.html" title="&lt;TABLE&gt;" alt="" coords="829,197,944,245"/>
-<area shape="rect" id="c403484" href="../rdf/Resource.html" title="org.universAAL.middleware.rdf.Resource" alt="" coords="417,17,495,42"/>
-<area shape="rect" id="node9" href="../rdf/Resource.html" title="&lt;TABLE&gt;" alt="" coords="407,5,505,53"/>
+<area shape="rect" id="c403434" href="./Complement.html" title="org.universAAL.middleware.owl.Complement" alt="" coords="114,209,209,234"/>
+<area shape="rect" id="node2" href="./Complement.html" title="&lt;TABLE&gt;" alt="" coords="104,197,219,245"/>
+<area shape="rect" id="c403442" href="./TypeURI.html" title="org.universAAL.middleware.owl.TypeURI" alt="" coords="253,209,326,234"/>
+<area shape="rect" id="node3" href="./TypeURI.html" title="&lt;TABLE&gt;" alt="" coords="243,197,336,245"/>
+<area shape="rect" id="c403453" href="./Intersection.html" title="org.universAAL.middleware.owl.Intersection" alt="" coords="370,209,459,234"/>
+<area shape="rect" id="node4" href="./Intersection.html" title="&lt;TABLE&gt;" alt="" coords="360,197,469,245"/>
+<area shape="rect" id="c403460" href="./Enumeration.html" title="org.universAAL.middleware.owl.Enumeration" alt="" coords="504,209,597,234"/>
+<area shape="rect" id="node5" href="./Enumeration.html" title="&lt;TABLE&gt;" alt="" coords="493,197,608,245"/>
+<area shape="rect" id="c403461" href="./TypeRestriction.html" title="org.universAAL.middleware.owl.TypeRestriction" alt="" coords="642,209,755,234"/>
+<area shape="rect" id="node6" href="./TypeRestriction.html" title="&lt;TABLE&gt;" alt="" coords="632,197,765,245"/>
+<area shape="rect" id="c403467" href="./TypeExpression.html" title="org.universAAL.middleware.owl.TypeExpression" alt="" coords="357,113,472,138"/>
+<area shape="rect" id="node7" href="./TypeExpression.html" title="&lt;TABLE&gt;" alt="" coords="347,101,483,149"/>
+<area shape="rect" id="c403468" href="./PropertyRestriction.html" title="org.universAAL.middleware.owl.PropertyRestriction" alt="" coords="800,209,933,234"/>
+<area shape="rect" id="node8" href="./PropertyRestriction.html" title="&lt;TABLE&gt;" alt="" coords="789,197,944,245"/>
+<area shape="rect" id="c403496" href="../rdf/Resource.html" title="org.universAAL.middleware.rdf.Resource" alt="" coords="376,17,453,42"/>
+<area shape="rect" id="node9" href="../rdf/Resource.html" title="&lt;TABLE&gt;" alt="" coords="365,5,464,53"/>
 </map>

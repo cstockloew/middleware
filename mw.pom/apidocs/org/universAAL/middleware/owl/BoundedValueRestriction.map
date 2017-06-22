@@ -1,16 +1,16 @@
 <map id="G" name="G">
-<area shape="rect" id="c133107" href="./TypeRestriction.html" title="org.universAAL.middleware.owl.TypeRestriction" alt="" coords="330,17,443,42"/>
-<area shape="rect" id="node1" href="./TypeRestriction.html" title="&lt;TABLE&gt;" alt="" coords="320,5,453,53"/>
-<area shape="rect" id="c133142" href="./BoundedValueRestriction.html" title="org.universAAL.middleware.owl.BoundedValueRestriction" alt="" coords="303,113,471,138"/>
-<area shape="rect" id="node7" href="./BoundedValueRestriction.html" title="&lt;TABLE&gt;" alt="" coords="292,101,481,149"/>
-<area shape="rect" id="c133127" href="./LongRestriction.html" title="org.universAAL.middleware.owl.LongRestriction" alt="" coords="16,209,128,234"/>
-<area shape="rect" id="node2" href="./LongRestriction.html" title="&lt;TABLE&gt;" alt="" coords="5,197,139,245"/>
-<area shape="rect" id="c133130" href="./IntRestriction.html" title="org.universAAL.middleware.owl.IntRestriction" alt="" coords="173,209,272,234"/>
-<area shape="rect" id="node3" href="./IntRestriction.html" title="&lt;TABLE&gt;" alt="" coords="163,197,283,245"/>
-<area shape="rect" id="c133131" href="./IndividualRestriction.html" title="org.universAAL.middleware.owl.IndividualRestriction" alt="" coords="317,209,456,234"/>
-<area shape="rect" id="node4" href="./IndividualRestriction.html" title="&lt;TABLE&gt;" alt="" coords="307,197,467,245"/>
-<area shape="rect" id="c133133" href="./FloatRestriction.html" title="org.universAAL.middleware.owl.FloatRestriction" alt="" coords="501,209,614,234"/>
-<area shape="rect" id="node5" href="./FloatRestriction.html" title="&lt;TABLE&gt;" alt="" coords="491,197,624,245"/>
-<area shape="rect" id="c133136" href="./DoubleRestriction.html" title="org.universAAL.middleware.owl.DoubleRestriction" alt="" coords="659,209,784,234"/>
-<area shape="rect" id="node6" href="./DoubleRestriction.html" title="&lt;TABLE&gt;" alt="" coords="648,197,795,245"/>
+<area shape="rect" id="c133115" href="./FloatRestriction.html" title="org.universAAL.middleware.owl.FloatRestriction" alt="" coords="15,209,129,234"/>
+<area shape="rect" id="node1" href="./FloatRestriction.html" title="&lt;TABLE&gt;" alt="" coords="5,197,139,245"/>
+<area shape="rect" id="c133118" href="./IndividualRestriction.html" title="org.universAAL.middleware.owl.IndividualRestriction" alt="" coords="173,209,312,234"/>
+<area shape="rect" id="node2" href="./IndividualRestriction.html" title="&lt;TABLE&gt;" alt="" coords="163,197,323,245"/>
+<area shape="rect" id="c133121" href="./DoubleRestriction.html" title="org.universAAL.middleware.owl.DoubleRestriction" alt="" coords="357,209,483,234"/>
+<area shape="rect" id="node3" href="./DoubleRestriction.html" title="&lt;TABLE&gt;" alt="" coords="347,197,493,245"/>
+<area shape="rect" id="c133124" href="./IntRestriction.html" title="org.universAAL.middleware.owl.IntRestriction" alt="" coords="528,209,627,234"/>
+<area shape="rect" id="node4" href="./IntRestriction.html" title="&lt;TABLE&gt;" alt="" coords="517,197,637,245"/>
+<area shape="rect" id="c133136" href="./TypeRestriction.html" title="org.universAAL.middleware.owl.TypeRestriction" alt="" coords="363,17,477,42"/>
+<area shape="rect" id="node5" href="./TypeRestriction.html" title="&lt;TABLE&gt;" alt="" coords="353,5,487,53"/>
+<area shape="rect" id="c133138" href="./BoundedValueRestriction.html" title="org.universAAL.middleware.owl.BoundedValueRestriction" alt="" coords="336,113,504,138"/>
+<area shape="rect" id="node6" href="./BoundedValueRestriction.html" title="&lt;TABLE&gt;" alt="" coords="325,101,515,149"/>
+<area shape="rect" id="c133139" href="./LongRestriction.html" title="org.universAAL.middleware.owl.LongRestriction" alt="" coords="672,209,784,234"/>
+<area shape="rect" id="node7" href="./LongRestriction.html" title="&lt;TABLE&gt;" alt="" coords="661,197,795,245"/>
 </map>

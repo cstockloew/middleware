@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="c146966" href="../../../rdf/Resource.html" title="org.universAAL.middleware.rdf.Resource" alt="" coords="16,19,93,45"/>
+<area shape="rect" id="c146978" href="../../../rdf/Resource.html" title="org.universAAL.middleware.rdf.Resource" alt="" coords="16,19,93,45"/>
 <area shape="rect" id="node1" href="../../../rdf/Resource.html" title="&lt;TABLE&gt;" alt="" coords="5,8,104,56"/>
-<area shape="rect" id="c147328" href="./CallMessage.html" title="org.universAAL.middleware.ui.impl.generic.CallMessage" alt="" coords="20,118,345,143"/>
+<area shape="rect" id="c147324" href="./CallMessage.html" title="org.universAAL.middleware.ui.impl.generic.CallMessage" alt="" coords="20,118,345,143"/>
 <area shape="rect" id="node4" href="./CallMessage.html" title="&lt;TABLE&gt;" alt="" coords="9,107,356,155"/>
 <area shape="rect" id="c147318" href="../UIStrategyCaller.UIRequestCall.html" title="org.universAAL.middleware.ui.impl.UIStrategyCaller.UIRequestCall" alt="" coords="129,214,236,239"/>
 <area shape="rect" id="node2" href="../UIStrategyCaller.UIRequestCall.html" title="&lt;TABLE&gt;" alt="" coords="119,203,247,251"/>
