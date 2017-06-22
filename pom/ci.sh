@@ -54,6 +54,7 @@ do_script() {
   fi
   
   if [[ $MAT == MAT_REPORT ]]; then
+      mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e
       mvn javadoc:aggregate -fae -e | grep -i "INFO] Build"
       mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Duaal.report=ci-repo -fn -e
       mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e
