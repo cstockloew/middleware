@@ -21,11 +21,18 @@ publish_site() {
   git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/cstockloew/${MY_REPO} gh-pages > /dev/null
 
   cd gh-pages
-  git rm --ignore-unmatch -rf . > /dev/null
+  #git rm --ignore-unmatch -rf . > /dev/null
   cp -Rf $HOME/site/$XTRAS$MY_REPO/* .
   git add -f . > /dev/null
-  git commit -m "Latest site on successful travis build $TRAVIS_BUILD_NUMBER auto-pushed to gh-pages"  > /dev/null
+  git commit -m "Latest site on successful travis build $TRAVIS_BUILD_NUMBER ($MAT) auto-pushed to gh-pages"  > /dev/null
   git push -fq origin gh-pages > /dev/null
+  
+  # try again if push fails (if another job has pushed changes in parallel)
+  if [ $? -ne 0 ]
+  then
+    git pull
+    git push -fq origin gh-pages > /dev/null
+  fi
 
   echo -e "Published site to gh-pages.\n"
 }
@@ -35,49 +42,69 @@ do_script() {
   free -m
   
   case "$MAT" in
-    0)  mvn javadoc:aggregate -fae -e | grep -i "INFO] Build";;
-    1)  mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae -e -Dorg.universAAL.junit.console.output=false ;
-        mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=html -DskipTests -fae -e -Dorg.universAAL.junit.console.output=false ;;
-    2)  echo "2";;
+    MAT_TEST)
+      mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e ;
+      mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae -e ;
+      mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=html -DskipTests -fae -e ;
+      #mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Dpmd.skip=true -Dcpd.skip=true -Dfindbugs.skip=true -Duaal.report=ci-repo -fn -e ;
+      # create index to have a site that can be staged
+      mvn project-info-reports:index
+      mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e ;
+      find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} + ;;
+    MAT_REPORT)
+      mvn javadoc:aggregate -fae -e | grep -i "INFO] Build" ;
+      mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Duaal.report=ci-repo -fn -e ;
+      mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e ;
+      find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} + ;;
+    MAT_DEPLOY)
+      mvn clean install -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e ;;
   esac
   
-  exit 0
-  
+#  exit 0
 #  echo "---------- 
-  mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e
-#  | grep -i "INFO] Build"
-#  ((((mvn javadoc:javadoc -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
-# - ((((mvn surefire-report:report -Dsurefire-report.aggregate=true -fae; echo $? >&3) | grep -i "INFO] Build" >&4) 3>&1) | (read xs; exit $xs)) 4>&1
-  mvn javadoc:aggregate -fae -e | grep -i "INFO] Build"
-  mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae -e -Dorg.universAAL.junit.console.output=false 
-#  | grep -i "INFO] Build"
-  mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=html -DskipTests -fae -e -Dorg.universAAL.junit.console.output=false 
-#  | grep -i "INFO] Build"
-#  mvn surefire-report:report -Dsurefire-report.aggregate=true -fae -e
-#  | grep -i "INFO] Build"
-  mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Duaal.report=ci-repo -fn -e
-#  | grep -i "INFO] Build"
-  mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e
-#  | grep -i "INFO] Build"
-  find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} +
+#  mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e
+#  mvn javadoc:aggregate -fae -e | grep -i "INFO] Build"
+#  mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae -e -Dorg.universAAL.junit.console.output=false 
+#  mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=html -DskipTests -fae -e -Dorg.universAAL.junit.console.output=false 
+#  mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Duaal.report=ci-repo -fn -e
+#  mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e
+#  find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} +
 }
 
 do_success() {
   echo -e "do_success"
   
-  mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Duaal.report=ci-repo -fn -e
-  mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e
-  find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} +
+  if [[ $MAT == MAT_TEST ]]; then
+    export OLD_DIR=`pwd`
+    publish_site
+    cd "$OLD_DIR"
+    export GH_TOKEN="deleted"
+    export NIGHTLY_PASSWORD="deleted"
+    export NIGHTLY_USERNAME="deleted"
+    #mvn org.universAAL.support:cigraph-maven-plugin:3.4.1-SNAPSHOT:cigraph -Dtoken=$CI_TOKEN -N -Djava.awt.headless=true 
+    export CI_TOKEN="deleted"
+    bash <(curl -s https://codecov.io/bash)
+    mvn org.eluder.coveralls:coveralls-maven-plugin:4.3.0:report -e
+  fi
   
-  #mvn deploy -DskipTests -DaltDeploymentRepository=uaal-nightly::default::http://depot.universaal.org/maven-repo/nightly/ -fn | grep -i "INFO] Build"
-  export OLD_DIR=`pwd`
-  publish_site
-  cd "$OLD_DIR"
-  export GH_TOKEN="deleted"
-  export NIGHTLY_PASSWORD="deleted"
-  export NIGHTLY_USERNAME="deleted"
+  if [[ $MAT == MAT_REPORT ]]; then
+    #mvn org.universAAL.support:cigraph-maven-plugin:3.4.1-SNAPSHOT:cigraph -Dtoken=$CI_TOKEN -N -Djava.awt.headless=true 
+    publish_site
+  fi
+  
+  if [[ $MAT == MAT_DEPLOY ]]; then
+    #mvn deploy -DskipTests -DaltDeploymentRepository=uaal-nightly::default::http://depot.universaal.org/maven-repo/nightly/ -fn | grep -i "INFO] Build"
+  fi
+  
+  #exit 0
+  #export OLD_DIR=`pwd`
+  #publish_site
+  #cd "$OLD_DIR"
+  #export GH_TOKEN="deleted"
+  #export NIGHTLY_PASSWORD="deleted"
+  #export NIGHTLY_USERNAME="deleted"
   #mvn org.universAAL.support:cigraph-maven-plugin:3.4.1-SNAPSHOT:cigraph -Dtoken=$CI_TOKEN -N -Djava.awt.headless=true 
-  export CI_TOKEN="deleted"
+  #export CI_TOKEN="deleted"
   #bash <(curl -s https://codecov.io/bash)
   #mvn org.eluder.coveralls:coveralls-maven-plugin:4.3.0:report -e
 }
