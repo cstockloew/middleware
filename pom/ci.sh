@@ -61,6 +61,9 @@ do_script() {
   fi
   
   if [[ $MAT == MAT_DEPLOY ]]; then
+      mvn org.apache.maven.plugins:maven-dependency-plugin:3.0.1:get -Dartifact=org.slf4j:com.springsource.slf4j.api:1.5.0
+      mvn org.apache.maven.plugins:maven-dependency-plugin:3.0.1:get -Dartifact=org.slf4j:com.springsource.slf4j.log4j:1.5.0
+      mvn org.apache.maven.plugins:maven-dependency-plugin:3.0.1:get -Dartifact=org.slf4j:com.springsource.slf4j.org.apache.commons.logging:1.5.0
       mvn clean install -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e 
   fi
   
