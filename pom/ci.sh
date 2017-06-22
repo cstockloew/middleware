@@ -30,6 +30,7 @@ publish_site() {
   # try again if push fails (if another job has pushed changes in parallel)
   if [ $? -ne 0 ]
   then
+    echo -e "Trying to publish site again..\n"
     git pull
     git push -fq origin gh-pages > /dev/null
   fi
@@ -41,24 +42,27 @@ do_script() {
   echo -e "do_script"
   free -m
   
-  case "$MAT" in
-    MAT_TEST)
-      mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e ;
-      mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae -e ;
-      mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=html -DskipTests -fae -e ;
-      #mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Dpmd.skip=true -Dcpd.skip=true -Dfindbugs.skip=true -Duaal.report=ci-repo -fn -e ;
+  if [[ $MAT == MAT_TEST ]]; then
+      mvn clean install -DskipTests -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e
+      mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=xml -fae -e
+      mvn cobertura:cobertura -Dcobertura.aggregate=true -Dcobertura.report.format=html -DskipTests -fae -e
+      #mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Dpmd.skip=true -Dcpd.skip=true -Dfindbugs.skip=true -Duaal.report=ci-repo -fn -e
       # create index to have a site that can be staged
       mvn project-info-reports:index
-      mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e ;
-      find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} + ;;
-    MAT_REPORT)
-      mvn javadoc:aggregate -fae -e | grep -i "INFO] Build" ;
-      mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Duaal.report=ci-repo -fn -e ;
-      mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e ;
-      find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} + ;;
-    MAT_DEPLOY)
-      mvn clean install -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e ;;
-  esac
+      mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e
+      find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} +
+  fi
+  
+  if [[ $MAT == MAT_REPORT ]]; then
+      mvn javadoc:aggregate -fae -e | grep -i "INFO] Build"
+      mvn site:site -DskipTests -Dcobertura.skip -Dmaven.javadoc.skip=true -Duaal.report=ci-repo -fn -e
+      mvn site:stage -DstagingDirectory=$HOME/site/main -fn -e
+      find $HOME/site/ -type f -name "*.html" -exec sed -i 's/uAAL.pom/platform/g' {} +
+  fi
+  
+  if [[ $MAT == MAT_DEPLOY ]]; then
+      mvn clean install -Dorg.ops4j.pax.logging.DefaultServiceLog.level=WARN -e 
+  fi
   
 #  exit 0
 #  echo "---------- 
@@ -88,8 +92,8 @@ do_success() {
   fi
   
   if [[ $MAT == MAT_REPORT ]]; then
-    #mvn org.universAAL.support:cigraph-maven-plugin:3.4.1-SNAPSHOT:cigraph -Dtoken=$CI_TOKEN -N -Djava.awt.headless=true 
     publish_site
+    #mvn org.universAAL.support:cigraph-maven-plugin:3.4.1-SNAPSHOT:cigraph -Dtoken=$CI_TOKEN -N -Djava.awt.headless=true 
   fi
   
 #  if [[ $MAT == MAT_DEPLOY ]]; then
