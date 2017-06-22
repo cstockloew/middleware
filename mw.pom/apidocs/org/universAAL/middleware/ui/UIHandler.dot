@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.bus.member.Callee
-	c413746 [label=<<table title="org.universAAL.middleware.bus.member.Callee" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../bus/member/Callee.html">
+	c413747 [label=<<table title="org.universAAL.middleware.bus.member.Callee" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../bus/member/Callee.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Callee </font></td></tr>
 		</table></td></tr>
@@ -22,6 +22,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UIHandler.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.ui.UIHandler extends org.universAAL.middleware.bus.member.Callee
-	c413746:p -> c413862:p [dir=back,arrowtail=empty];
+	c413747:p -> c413862:p [dir=back,arrowtail=empty];
 }
 

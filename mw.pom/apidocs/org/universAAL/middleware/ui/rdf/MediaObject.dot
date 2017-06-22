@@ -10,18 +10,18 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.ui.rdf.Output
-	c292861 [label=<<table title="org.universAAL.middleware.ui.rdf.Output" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Output.html">
+	c292852 [label=<<table title="org.universAAL.middleware.ui.rdf.Output" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Output.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Output </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Output.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.ui.rdf.MediaObject
-	c292862 [label=<<table title="org.universAAL.middleware.ui.rdf.MediaObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MediaObject.html">
+	c292853 [label=<<table title="org.universAAL.middleware.ui.rdf.MediaObject" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MediaObject.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MediaObject </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MediaObject.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.ui.rdf.MediaObject extends org.universAAL.middleware.ui.rdf.Output
-	c292861:p -> c292862:p [dir=back,arrowtail=empty];
+	c292852:p -> c292853:p [dir=back,arrowtail=empty];
 }
 

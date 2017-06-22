@@ -17,12 +17,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../BrokerMessage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.brokers.message.aalspace.AALSpaceMessage
-	c84971 [label=<<table title="org.universAAL.middleware.brokers.message.aalspace.AALSpaceMessage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AALSpaceMessage.html">
+	c84973 [label=<<table title="org.universAAL.middleware.brokers.message.aalspace.AALSpaceMessage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AALSpaceMessage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AALSpaceMessage </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AALSpaceMessage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.brokers.message.aalspace.AALSpaceMessage implements org.universAAL.middleware.brokers.message.BrokerMessage
-	c84969:p -> c84971:p [dir=back,arrowtail=empty,style=dashed];
+	c84969:p -> c84973:p [dir=back,arrowtail=empty,style=dashed];
 }
 

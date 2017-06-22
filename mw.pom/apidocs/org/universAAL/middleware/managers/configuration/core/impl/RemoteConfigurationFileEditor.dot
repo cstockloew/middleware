@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.interfaces.configuration.configurationEditionTypes.ConfigurationFileEditor
-	c345834 [label=<<table title="org.universAAL.middleware.interfaces.configuration.configurationEditionTypes.ConfigurationFileEditor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../interfaces/configuration/configurationEditionTypes/ConfigurationFileEditor.html">
+	c345832 [label=<<table title="org.universAAL.middleware.interfaces.configuration.configurationEditionTypes.ConfigurationFileEditor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../interfaces/configuration/configurationEditionTypes/ConfigurationFileEditor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ConfigurationFileEditor </td></tr>
@@ -31,6 +31,6 @@ digraph G {
 	//org.universAAL.middleware.managers.configuration.core.impl.RemoteConfigurationFileEditor extends org.universAAL.middleware.managers.configuration.core.impl.RemoteConfigurationEntity
 	c345989:p -> c345988:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.managers.configuration.core.impl.RemoteConfigurationFileEditor implements org.universAAL.middleware.interfaces.configuration.configurationEditionTypes.ConfigurationFileEditor
-	c345834:p -> c345988:p [dir=back,arrowtail=empty,style=dashed];
+	c345832:p -> c345988:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -22,14 +22,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DefaultContextPublisher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.context.ContextPublisher
-	c187374 [label=<<table title="org.universAAL.middleware.context.ContextPublisher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextPublisher.html">
+	c187369 [label=<<table title="org.universAAL.middleware.context.ContextPublisher" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ContextPublisher.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ContextPublisher </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ContextPublisher.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.context.DefaultContextPublisher extends org.universAAL.middleware.context.ContextPublisher
-	c187374:p -> c187367:p [dir=back,arrowtail=empty];
+	c187369:p -> c187367:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.context.ContextPublisher extends org.universAAL.middleware.bus.member.Publisher
-	c187340:p -> c187374:p [dir=back,arrowtail=empty];
+	c187340:p -> c187369:p [dir=back,arrowtail=empty];
 }
 

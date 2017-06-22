@@ -10,13 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.rdf.FinalizedResource
-	c414153 [label=<<table title="org.universAAL.middleware.rdf.FinalizedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../rdf/FinalizedResource.html">
+	c414156 [label=<<table title="org.universAAL.middleware.rdf.FinalizedResource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../rdf/FinalizedResource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FinalizedResource </td></tr>
 		</table></td></tr>
 		</table>>, URL="../rdf/FinalizedResource.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.bus.model.matchable.UtilityAdvertisement
-	c414379 [label=<<table title="org.universAAL.middleware.bus.model.matchable.UtilityAdvertisement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../bus/model/matchable/UtilityAdvertisement.html">
+	c414381 [label=<<table title="org.universAAL.middleware.bus.model.matchable.UtilityAdvertisement" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../bus/model/matchable/UtilityAdvertisement.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UtilityAdvertisement </td></tr>
@@ -29,8 +29,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UIHandlerProfile.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.ui.UIHandlerProfile extends org.universAAL.middleware.rdf.FinalizedResource
-	c414153:p -> c414488:p [dir=back,arrowtail=empty];
+	c414156:p -> c414488:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.ui.UIHandlerProfile implements org.universAAL.middleware.bus.model.matchable.UtilityAdvertisement
-	c414379:p -> c414488:p [dir=back,arrowtail=empty,style=dashed];
+	c414381:p -> c414488:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.bus.member.Caller
-	c149700 [label=<<table title="org.universAAL.middleware.bus.member.Caller" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Caller.html">
+	c149702 [label=<<table title="org.universAAL.middleware.bus.member.Caller" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Caller.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> Caller </font></td></tr>
 		</table></td></tr>
@@ -22,7 +22,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BusMember.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.service.ServiceCaller
-	c149770 [label=<<table title="org.universAAL.middleware.service.ServiceCaller" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/ServiceCaller.html">
+	c149761 [label=<<table title="org.universAAL.middleware.service.ServiceCaller" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../service/ServiceCaller.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> ServiceCaller </font></td></tr>
 		</table></td></tr>
@@ -34,10 +34,10 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../ui/UICaller.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.bus.member.Caller extends org.universAAL.middleware.bus.member.BusMember
-	c149705:p -> c149700:p [dir=back,arrowtail=empty];
+	c149705:p -> c149702:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.service.ServiceCaller extends org.universAAL.middleware.bus.member.Caller
-	c149700:p -> c149770:p [dir=back,arrowtail=empty];
+	c149702:p -> c149761:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.ui.UICaller extends org.universAAL.middleware.bus.member.Caller
-	c149700:p -> c149819:p [dir=back,arrowtail=empty];
+	c149702:p -> c149819:p [dir=back,arrowtail=empty];
 }
 

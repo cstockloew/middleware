@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.container.SharedObjectListener
-	c383905 [label=<<table title="org.universAAL.middleware.container.SharedObjectListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SharedObjectListener.html">
+	c383903 [label=<<table title="org.universAAL.middleware.container.SharedObjectListener" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SharedObjectListener.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SharedObjectListener </td></tr>
@@ -53,13 +53,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../managers/deploy/DeployManagerImpl.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.SharedObjectConnector
-	c384262 [label=<<table title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.SharedObjectConnector" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../managers/configuration/core/impl/secondaryManagers/SharedObjectConnector.html">
+	c384258 [label=<<table title="org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.SharedObjectConnector" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../managers/configuration/core/impl/secondaryManagers/SharedObjectConnector.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedObjectConnector </td></tr>
 		</table></td></tr>
 		</table>>, URL="../managers/configuration/core/impl/secondaryManagers/SharedObjectConnector.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.ui.impl.generic.CoordinatedStrategy
-	c384404 [label=<<table title="org.universAAL.middleware.ui.impl.generic.CoordinatedStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ui/impl/generic/CoordinatedStrategy.html">
+	c384402 [label=<<table title="org.universAAL.middleware.ui.impl.generic.CoordinatedStrategy" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ui/impl/generic/CoordinatedStrategy.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CoordinatedStrategy </td></tr>
 		</table></td></tr>
@@ -71,7 +71,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../managers/distributedmw/impl/SpaceListener.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.managers.distributedmw.impl.SharedObjectConnector
-	c384472 [label=<<table title="org.universAAL.middleware.managers.distributedmw.impl.SharedObjectConnector" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../managers/distributedmw/impl/SharedObjectConnector.html">
+	c384466 [label=<<table title="org.universAAL.middleware.managers.distributedmw.impl.SharedObjectConnector" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../managers/distributedmw/impl/SharedObjectConnector.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SharedObjectConnector </td></tr>
 		</table></td></tr>
@@ -83,26 +83,26 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../connectors/deploy/karaf/KarafDeployConnector.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.modules.communication.CommunicationModuleImpl implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384202:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384202:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.brokers.control.ControlBroker implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384228:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384228:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.modules.aalspace.AALSpaceModuleImpl implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384229:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384229:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.connectors.discovery.slp.SLPDiscoveryConnector implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384230:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384230:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.managers.aalspace.AALSpaceManagerImpl implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384234:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384234:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.managers.deploy.DeployManagerImpl implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384241:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384241:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.managers.configuration.core.impl.secondaryManagers.SharedObjectConnector implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384262:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384258:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.ui.impl.generic.CoordinatedStrategy implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384404:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384402:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.managers.distributedmw.impl.SpaceListener implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384465:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384465:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.managers.distributedmw.impl.SharedObjectConnector implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384472:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384466:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.connectors.deploy.karaf.KarafDeployConnector implements org.universAAL.middleware.container.SharedObjectListener
-	c383905:p -> c384498:p [dir=back,arrowtail=empty,style=dashed];
+	c383903:p -> c384498:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="c333816" href="../owl/DatatypeProperty.html" title="org.universAAL.middleware.owl.DatatypeProperty" alt="" coords="16,209,139,234"/>
-<area shape="rect" id="node1" href="../owl/DatatypeProperty.html" title="&lt;TABLE&gt;" alt="" coords="5,197,149,245"/>
-<area shape="rect" id="c333821" href="../owl/ObjectProperty.html" title="org.universAAL.middleware.owl.ObjectProperty" alt="" coords="183,209,291,234"/>
-<area shape="rect" id="node2" href="../owl/ObjectProperty.html" title="&lt;TABLE&gt;" alt="" coords="173,197,301,245"/>
-<area shape="rect" id="c333869" href="./Property.html" title="org.universAAL.middleware.rdf.Property" alt="" coords="123,113,192,138"/>
-<area shape="rect" id="node3" href="./Property.html" title="&lt;TABLE&gt;" alt="" coords="112,101,203,149"/>
-<area shape="rect" id="c333877" href="./FinalizedResource.html" title="org.universAAL.middleware.rdf.FinalizedResource" alt="" coords="93,17,222,42"/>
-<area shape="rect" id="node4" href="./FinalizedResource.html" title="&lt;TABLE&gt;" alt="" coords="83,5,232,53"/>
+<area shape="rect" id="c333832" href="../owl/ObjectProperty.html" title="org.universAAL.middleware.owl.ObjectProperty" alt="" coords="15,209,123,234"/>
+<area shape="rect" id="node1" href="../owl/ObjectProperty.html" title="&lt;TABLE&gt;" alt="" coords="5,197,133,245"/>
+<area shape="rect" id="c333848" href="../owl/DatatypeProperty.html" title="org.universAAL.middleware.owl.DatatypeProperty" alt="" coords="168,209,291,234"/>
+<area shape="rect" id="node2" href="../owl/DatatypeProperty.html" title="&lt;TABLE&gt;" alt="" coords="157,197,301,245"/>
+<area shape="rect" id="c333875" href="./Property.html" title="org.universAAL.middleware.rdf.Property" alt="" coords="115,113,184,138"/>
+<area shape="rect" id="node3" href="./Property.html" title="&lt;TABLE&gt;" alt="" coords="104,101,195,149"/>
+<area shape="rect" id="c333880" href="./FinalizedResource.html" title="org.universAAL.middleware.rdf.FinalizedResource" alt="" coords="85,17,214,42"/>
+<area shape="rect" id="node4" href="./FinalizedResource.html" title="&lt;TABLE&gt;" alt="" coords="75,5,224,53"/>
 </map>

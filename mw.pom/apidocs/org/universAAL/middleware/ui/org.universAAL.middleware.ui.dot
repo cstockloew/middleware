@@ -9,19 +9,18 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// org.universAAL.middleware.ui.IUIBus
-	c52539 [label=<<table title="org.universAAL.middleware.ui.IUIBus" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IUIBus.html">
+	// org.universAAL.middleware.ui.UIResponse
+	c52539 [label=<<table title="org.universAAL.middleware.ui.UIResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UIResponse.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> IUIBus </td></tr>
+<tr><td align="center" balign="center"> UIResponse </td></tr>
 		</table></td></tr>
-		</table>>, URL="./IUIBus.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// org.universAAL.middleware.ui.UIBusFacade
-	c52540 [label=<<table title="org.universAAL.middleware.ui.UIBusFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UIBusFacade.html">
+		</table>>, URL="./UIResponse.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// org.universAAL.middleware.ui.UIRequest
+	c52540 [label=<<table title="org.universAAL.middleware.ui.UIRequest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UIRequest.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> UIBusFacade </td></tr>
+<tr><td align="center" balign="center"> UIRequest </td></tr>
 		</table></td></tr>
-		</table>>, URL="./UIBusFacade.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./UIRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.ui.UIHandlerProfile
 	c52541 [label=<<table title="org.universAAL.middleware.ui.UIHandlerProfile" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UIHandlerProfile.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
@@ -40,18 +39,19 @@ digraph G {
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> UICaller </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./UICaller.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// org.universAAL.middleware.ui.UIResponse
-	c52544 [label=<<table title="org.universAAL.middleware.ui.UIResponse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UIResponse.html">
+	// org.universAAL.middleware.ui.UIBusFacade
+	c52544 [label=<<table title="org.universAAL.middleware.ui.UIBusFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UIBusFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> UIResponse </td></tr>
+<tr><td align="center" balign="center"> UIBusFacade </td></tr>
 		</table></td></tr>
-		</table>>, URL="./UIResponse.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
-	// org.universAAL.middleware.ui.UIRequest
-	c52545 [label=<<table title="org.universAAL.middleware.ui.UIRequest" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UIRequest.html">
+		</table>>, URL="./UIBusFacade.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+	// org.universAAL.middleware.ui.IUIBus
+	c52545 [label=<<table title="org.universAAL.middleware.ui.IUIBus" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IUIBus.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> UIRequest </td></tr>
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> IUIBus </td></tr>
 		</table></td></tr>
-		</table>>, URL="./UIRequest.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./IUIBus.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.ui.IDialogManager
 	c52546 [label=<<table title="org.universAAL.middleware.ui.IDialogManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IDialogManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">

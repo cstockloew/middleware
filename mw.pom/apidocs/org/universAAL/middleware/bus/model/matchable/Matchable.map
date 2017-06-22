@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="c290201" href="./Event.html" title="org.universAAL.middleware.bus.model.matchable.Event" alt="" coords="16,113,101,154"/>
-<area shape="rect" id="node1" href="./Event.html" title="&lt;TABLE&gt;" alt="" coords="5,107,112,159"/>
-<area shape="rect" id="c290207" href="./Requirement.html" title="org.universAAL.middleware.bus.model.matchable.Requirement" alt="" coords="146,113,241,154"/>
-<area shape="rect" id="node2" href="./Requirement.html" title="&lt;TABLE&gt;" alt="" coords="136,107,251,159"/>
-<area shape="rect" id="c290208" href="./Advertisement.html" title="org.universAAL.middleware.bus.model.matchable.Advertisement" alt="" coords="285,113,390,154"/>
-<area shape="rect" id="node3" href="./Advertisement.html" title="&lt;TABLE&gt;" alt="" coords="275,107,400,159"/>
-<area shape="rect" id="c290209" href="./Matchable.html" title="org.universAAL.middleware.bus.model.matchable.Matchable" alt="" coords="151,11,236,53"/>
-<area shape="rect" id="node4" href="./Matchable.html" title="&lt;TABLE&gt;" alt="" coords="140,6,247,58"/>
+<area shape="rect" id="c290204" href="./Requirement.html" title="org.universAAL.middleware.bus.model.matchable.Requirement" alt="" coords="15,113,110,154"/>
+<area shape="rect" id="node1" href="./Requirement.html" title="&lt;TABLE&gt;" alt="" coords="5,107,120,159"/>
+<area shape="rect" id="c290206" href="./Matchable.html" title="org.universAAL.middleware.bus.model.matchable.Matchable" alt="" coords="155,11,240,53"/>
+<area shape="rect" id="node2" href="./Matchable.html" title="&lt;TABLE&gt;" alt="" coords="144,6,251,58"/>
+<area shape="rect" id="c290208" href="./Event.html" title="org.universAAL.middleware.bus.model.matchable.Event" alt="" coords="155,113,240,154"/>
+<area shape="rect" id="node3" href="./Event.html" title="&lt;TABLE&gt;" alt="" coords="144,107,251,159"/>
+<area shape="rect" id="c290209" href="./Advertisement.html" title="org.universAAL.middleware.bus.model.matchable.Advertisement" alt="" coords="285,113,390,154"/>
+<area shape="rect" id="node4" href="./Advertisement.html" title="&lt;TABLE&gt;" alt="" coords="275,107,400,159"/>
 </map>

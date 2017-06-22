@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.rdf.Resource
-	c146978 [label=<<table title="org.universAAL.middleware.rdf.Resource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../rdf/Resource.html">
+	c146966 [label=<<table title="org.universAAL.middleware.rdf.Resource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../rdf/Resource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Resource </td></tr>
 		</table></td></tr>
@@ -29,16 +29,16 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EventMessage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.ui.impl.generic.CallMessage<Strategy extends org.universAAL.middleware.ui.impl.generic.CallBasedStrategy>
-	c147324 [label=<<table title="org.universAAL.middleware.ui.impl.generic.CallMessage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CallMessage.html">
+	c147328 [label=<<table title="org.universAAL.middleware.ui.impl.generic.CallMessage" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CallMessage.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> CallMessage&lt;Strategy extends CallBasedStrategy&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./CallMessage.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.ui.impl.UIStrategyCaller.UIRequestCall extends org.universAAL.middleware.ui.impl.generic.CallMessage<org.universAAL.middleware.ui.impl.UIStrategyCaller>
-	c147324:p -> c147318:p [dir=back,arrowtail=empty];
+	c147328:p -> c147318:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.ui.impl.generic.CallMessage<Strategy extends org.universAAL.middleware.ui.impl.generic.CallBasedStrategy> extends org.universAAL.middleware.rdf.Resource
-	c146978:p -> c147324:p [dir=back,arrowtail=empty];
+	c146966:p -> c147328:p [dir=back,arrowtail=empty];
 	//org.universAAL.middleware.ui.impl.generic.CallMessage<Strategy extends org.universAAL.middleware.ui.impl.generic.CallBasedStrategy> implements org.universAAL.middleware.ui.impl.generic.EventMessage<Strategy extends org.universAAL.middleware.ui.impl.generic.EventBasedStrategy>
-	c147323:p -> c147324:p [dir=back,arrowtail=empty,style=dashed];
+	c147323:p -> c147328:p [dir=back,arrowtail=empty,style=dashed];
 }
 

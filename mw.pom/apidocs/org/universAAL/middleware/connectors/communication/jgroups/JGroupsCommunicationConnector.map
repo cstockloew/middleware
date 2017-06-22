@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="c266242" href="../../CommunicationConnector.html" title="org.universAAL.middleware.connectors.CommunicationConnector" alt="" coords="15,11,187,53"/>
+<area shape="rect" id="c266245" href="../../CommunicationConnector.html" title="org.universAAL.middleware.connectors.CommunicationConnector" alt="" coords="15,11,187,53"/>
 <area shape="rect" id="node1" href="../../CommunicationConnector.html" title="&lt;TABLE&gt;" alt="" coords="5,6,197,58"/>
 <area shape="rect" id="c266291" href="./JGroupsCommunicationConnector.html" title="org.universAAL.middleware.connectors.communication.jgroups.JGroupsCommunicationConnector" alt="" coords="236,118,457,143"/>
 <area shape="rect" id="node2" href="./JGroupsCommunicationConnector.html" title="&lt;TABLE&gt;" alt="" coords="225,107,468,155"/>

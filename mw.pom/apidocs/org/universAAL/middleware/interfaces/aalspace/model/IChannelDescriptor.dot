@@ -10,13 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.aalspace.json.model.ChannelDescriptor
-	c247196 [label=<<table title="org.universAAL.middleware.aalspace.json.model.ChannelDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../aalspace/json/model/ChannelDescriptor.html">
+	c247192 [label=<<table title="org.universAAL.middleware.aalspace.json.model.ChannelDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../aalspace/json/model/ChannelDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ChannelDescriptor </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../aalspace/json/model/ChannelDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	// org.universAAL.middleware.interfaces.aalspace.model.IChannelDescriptor
-	c247256 [label=<<table title="org.universAAL.middleware.interfaces.aalspace.model.IChannelDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IChannelDescriptor.html">
+	c247255 [label=<<table title="org.universAAL.middleware.interfaces.aalspace.model.IChannelDescriptor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./IChannelDescriptor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> IChannelDescriptor </td></tr>
@@ -29,8 +29,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../xml/model/ChannelDescriptor.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.aalspace.json.model.ChannelDescriptor implements org.universAAL.middleware.interfaces.aalspace.model.IChannelDescriptor
-	c247256:p -> c247196:p [dir=back,arrowtail=empty,style=dashed];
+	c247255:p -> c247192:p [dir=back,arrowtail=empty,style=dashed];
 	//org.universAAL.middleware.interfaces.aalspace.xml.model.ChannelDescriptor implements org.universAAL.middleware.interfaces.aalspace.model.IChannelDescriptor
-	c247256:p -> c247258:p [dir=back,arrowtail=empty,style=dashed];
+	c247255:p -> c247258:p [dir=back,arrowtail=empty,style=dashed];
 }
 

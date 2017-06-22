@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// org.universAAL.middleware.service.owls.profile.ResponseTimeInMilliseconds
-	c356156 [label=<<table title="org.universAAL.middleware.service.owls.profile.ResponseTimeInMilliseconds" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ResponseTimeInMilliseconds.html">
+	c356155 [label=<<table title="org.universAAL.middleware.service.owls.profile.ResponseTimeInMilliseconds" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ResponseTimeInMilliseconds.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResponseTimeInMilliseconds </td></tr>
 		</table></td></tr>
@@ -22,6 +22,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProfileParameter.html", fontname="Helvetica", fontcolor="black", fontsize=10.0];
 	//org.universAAL.middleware.service.owls.profile.ResponseTimeInMilliseconds extends org.universAAL.middleware.service.owls.profile.ProfileParameter
-	c356157:p -> c356156:p [dir=back,arrowtail=empty];
+	c356157:p -> c356155:p [dir=back,arrowtail=empty];
 }
 
